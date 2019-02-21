@@ -1,0 +1,489 @@
+
+
+
+<div class="full-screen-body">
+    <div class="col-xs-6 p_0">
+        <a  class="oppo_logo">
+          <img class="logo-hunter" src="assets/poolprize/image/pool_logo.jpg" (click)="backToHome()">
+        </a>
+    </div>
+  <audio #audioOption>
+    <source src='assets/cashblast/sound/bomBlastSound.wav' autoplay="true"type="audio/wav">
+  </audio>
+  <img src=" assets/cashblast/image/icon-sound.png" class="sound-icon">
+  
+  <!-- for two player -->
+  <div class="container-fluid gameplay-screen-1"  *ngIf="players_length == 2">
+    <div class="row">
+
+      <div class="player-outer-box user_box0">
+      <div class="" *ngFor=" let user of player; let ind=index;">
+        <div class="profile-box-new avtar-img" [ngClass]="['index'+ind]">
+          
+            <div class="number-box">
+                <p *ngIf="currentUser==user.playerName">
+                    <i class="fa fa-heart red-co" aria-hidden="true"></i> {{user.lifeLine}}
+                    <span>YOU</span>
+                  </p>
+                  <p *ngIf="currentUser!=user.playerName">
+                      <i class="fa fa-heart red-co" aria-hidden="true"></i> {{user.lifeLine}}
+                      <span>{{getMobileNumberMask(user.playerName)}}</span>
+                    </p>
+            </div>
+            <div  [ngClass]="['bomb-pos-'+(ind+1)]">
+                <img *ngIf="user.isBomb" src="assets/cashblast/image/icon1-1.gif" >
+                <!-- <img  *ngIf="isblast" class="one-gif" src="assets/cashblast/image/blast.gif" > -->
+            </div>
+        </div>
+        <div *ngIf="denomination === 'Points'" style="top: 52%;" class="quiz_pricebox">
+          <p><span>{{reward}} </span>{{denomination}}</p>
+        </div>
+        <div *ngIf="denomination !== 'Points'" style="top: 52%;" class="quiz_pricebox">
+          <p><span>{{denomination}} </span>{{reward}}</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+<!-- for three player -->
+<div class="container-fluid gameplay-screen-2"  *ngIf="players_length == 3">
+  <div class="row">
+<div class="player-outer-box user_box1">     
+    <div class="" *ngFor=" let user of player; let ind=index;">
+    <div class="profile-box-new avtar-img " [ngClass]="['index'+ind]">
+      <div class="number-box">
+          <p *ngIf="currentUser==user.playerName">
+              <i class="fa fa-heart red-co" aria-hidden="true"></i> {{user.lifeLine}}
+              <span>YOU</span>
+            </p>
+            <p *ngIf="currentUser!=user.playerName">
+                <i class="fa fa-heart red-co" aria-hidden="true"></i> {{user.lifeLine}}
+                <span>{{getMobileNumberMask(user.playerName)}}</span>
+              </p>
+      </div>
+      <div  [ngClass]="['bomb-pos-'+(ind+1)]">
+          <img *ngIf="user.isBomb" src="assets/cashblast/image/icon1-1.gif" >
+          <!-- <img *ngIf="isblast" class="one-gif" src="assets/cashblast/image/blast.gif" > -->
+      </div>
+    </div>
+    
+    <div *ngIf="denomination === 'Points'" style="top: 52%;" class="quiz_pricebox">
+      <p><span>{{reward}} </span>{{denomination}}</p>
+    </div>
+    <div *ngIf="denomination !== 'Points'" style="top: 52%;" class="quiz_pricebox">
+      <p><span>{{denomination}} </span>{{reward}}</p>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+<!-- for four player -->
+<div class="container-fluid gameplay-screen-3" *ngIf="players_length == 4">
+  <div class="row">
+<div class="player-outer-box user_box2" >
+    <div class="" *ngFor=" let user of player; let ind=index;">
+    <div class="profile-box-new avtar-img " [ngClass]="['index'+ind]">
+      <div class="number-box">
+          <p *ngIf="currentUser==user.playerName">
+              <i class="fa fa-heart red-co" aria-hidden="true"></i> {{user.lifeLine}}
+              <span>YOU</span>
+            </p>
+            <p *ngIf="currentUser!=user.playerName">
+                <i class="fa fa-heart red-co" aria-hidden="true"></i> {{user.lifeLine}}
+                <span>{{getMobileNumberMask(user.playerName)}}</span>
+              </p>
+      </div>
+      <div  [ngClass]="['bomb-pos-'+(ind+1)]">
+          <img *ngIf="user.isBomb" src="assets/cashblast/image/icon1-1.gif" >
+          
+      </div>
+    </div>
+    
+    <div *ngIf="denomination === 'Points'" style="top: 52%;" class="quiz_pricebox">
+      <p><span>{{reward}} </span>{{denomination}}</p>
+    </div>
+    <div *ngIf="denomination !== 'Points'" style="top: 52%;" class="quiz_pricebox">
+      <p><span>{{denomination}} </span>{{reward}}</p>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+<!-- for five player -->
+<div class="container-fluid"  *ngIf="players_length == 5">
+  <div class="row">
+<div class="player-outer-box user_box3">
+    <div class="" *ngFor=" let user of player; let ind=index;">
+    <div class="profile-box-new avtar-img " [ngClass]="['index'+ind]">
+      <div class="number-box">
+        <p *ngIf="currentUser==user.playerName">
+          <i class="fa fa-heart red-co" aria-hidden="true"></i> {{user.lifeLine}}
+          <span>YOU</span>
+        </p>
+        <p *ngIf="currentUser!=user.playerName">
+            <i class="fa fa-heart red-co" aria-hidden="true"></i> {{user.lifeLine}}
+            <span>{{getMobileNumberMask(user.playerName)}}</span>
+          </p>
+      </div>
+      <div  [ngClass]="['bomb-pos-'+(ind+1)]">
+          <img *ngIf="user.isBomb" src="assets/cashblast/image/icon1-1.gif" >
+          <!-- <img *ngIf="isblast" class="one-gif" src="assets/cashblast/image/blast.gif" > -->
+      </div>
+    </div>    
+    <div *ngIf="denomination === 'Points'" style="top: 52%;" class="quiz_pricebox">
+      <p><span>{{reward}} </span>{{denomination}}</p>
+    </div>
+    <div *ngIf="denomination !== 'Points'" style="top: 52%;" class="quiz_pricebox">
+      <p><span>{{denomination}} </span>{{reward}}</p>
+    </div>
+  </div>
+  </div>
+
+
+    </div>
+  </div>
+<!-- end loop -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="image-question-sec">
+        <img [src]='qImage'>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid m-bg">
+    <ngx-spinner
+    bdColor="rgba(51,51,51,0.8)"
+    size="medium"
+    color="#FF9800"
+    type="timer">
+   <p style="font-size: 20px; color: #FF9800"></p>
+  </ngx-spinner>
+  <div>
+  <img *ngIf="isblast" class="one-gif" src="assets/cashblast/image/blast.gif" >
+</div>
+    <div class="row progress-play">
+      <div class="col-xs-12 ">
+        <h3>{{Questions}}</h3>
+  
+      </div>
+    </div>
+  
+<div class="row progress-play-2">
+<div class="col-xs-12 ">
+  <div class="progress blue">
+    <div class="progress-bar" [ngStyle]="{'width.%':percent,'background-color':'#FF9800'}" >
+      <div class="progress-value">{{timeLeft}}s</div>
+    </div>
+  </div>
+  
+      </div>
+    </div>
+  
+    <div class="row quest-four"   *ngIf="!isOption">
+      <div class="opponent_tbox" >
+          <h5>Opponent's Turn</h5>
+      </div>    
+      </div>
+    <div class="row quest-four"   *ngIf="isOption">
+      <div class="col-xs-12 quest-box-m"  *ngFor="let Ans of QuesAnsList;let i =index">
+           <div class="result_box-play" >
+            <h5 id = '{{i}}'><button style="width: 100%;
+              background-color: initial;
+              box-shadow: 0px;
+              border: 0px;" [disabled]="isDisabled" (click)="getSelectedAns(Ans,i)"><span>{{i+1}}</span>{{Ans}}</button></h5>
+        </div>
+        </div>
+        </div>
+
+
+       
+      <!-- <div class="col-xs-12 quest-box-m">
+           <div class="result_box-play">
+          <h5><span>02</span>Katrina Kaif</h5>
+        </div>
+        </div>
+      <div class="col-xs-12 quest-box-m">
+           <div class="result_box-play">
+          <h5><span>03</span>Anushka Sharma</h5>
+        </div>
+        </div>
+      <div class="col-xs-12 quest-box-m">
+           <div class="result_box-play">
+          <h5><span>04</span>Deepika Padukone</h5>
+        </div>
+        </div>			 -->
+  
+  
+  
+  
+        
+  
+  </div>
+  
+  
+  
+  
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  yash 
+<div class="container-fluid m-bg">
+
+<div class="row sound-main">
+  <div class="start-sound" (click)="sound()">
+    <img src="assets/cashblast/image/icon-sound.png">
+  </div>
+</div>
+<div class="container">
+  <div class="game-m-box m-top"> -->
+  
+    <!-- <div class="col-xs-12 ">
+      <div class="g-circul-no">
+        </div>
+    </div>
+ -->
+    <!-- yash <div class="help_box_info">  -->
+<!-- for 1 opponent -->
+            <!-- yash <div class="quiz_box" *ngIf="players_length == 1">
+              <ul>
+                <div class="quiz_pricebox"><span>₹50</span></div>
+                <li *ngFor="let user of player; let ind=index;" [ngClass]="['quiz_imgbox'+ind]">
+                  <div class="quiz_img"><img src="assets/cashblast/image/quiz_img1.png">
+                  <img *ngIf="user.isBomb" class="blst_qimg blast_icon" src="assets/cashblast/image/blast_qimg.png">
+                  </div>
+                  <div class="quiz_numbox" *ngIf="currentUser==user.playerName">YOU
+                    <span><img src="assets/cashblast/image/heart_icon.png"> {{user.lifeLine}}</span>
+                  </div>
+                  <div class="quiz_numbox" *ngIf="currentUser!=user.playerName">{{getMobileNumberMask(user.playerName)}}
+                    <span><img src="assets/cashblast/image/heart_icon.png"> {{user.lifeLine}}</span>
+                  </div>
+
+                </li>
+                
+              </ul>
+            </div> -->
+<!-- yash for 2 opponent
+<div class="quiz_box quiz_box_2" *ngIf="players_length == 2">
+  <ul>
+    <div class="quiz_pricebox"><span>₹50</span></div>
+    <li *ngFor="let user of player; let ind=index;" [ngClass]="['quiz_imgbox'+ind]">
+      <div class="quiz_img"><img src="assets/cashblast/image/quiz_img1.png">
+      <img *ngIf="user.isBomb" class="blst_qimg blast_icon" src="assets/cashblast/image/blast_qimg.png">
+      </div>
+      <div class="quiz_numbox" *ngIf="currentUser==user.playerName">YOU
+        <span><img src="assets/cashblast/image/heart_icon.png"> {{user.lifeLine}}</span>
+      </div>
+      <div class="quiz_numbox" *ngIf="currentUser!=user.playerName">{{getMobileNumberMask(user.playerName)}}
+        <span><img src="assets/cashblast/image/heart_icon.png"> {{user.lifeLine}}</span>
+      </div>
+
+    </li>
+    
+  </ul>
+</div>     -->
+<!-- for 3 opponent -->
+<!-- yash
+<div class="quiz_box quiz_box_3" *ngIf="players_length == 3">
+  <ul>
+    <div class="quiz_pricebox"><span>₹50</span></div>
+    <li *ngFor="let user of player; let ind=index;" [ngClass]="['quiz_imgbox'+ind]">
+      <div class="quiz_img"><img src="assets/cashblast/image/quiz_img1.png">
+      <img *ngIf="user.isBomb" class="blst_qimg blast_icon" src="assets/cashblast/image/blast_qimg.png">
+      </div>
+      <div class="quiz_numbox" *ngIf="currentUser==user.playerName">YOU
+        <span><img src="assets/cashblast/image/heart_icon.png"> {{user.lifeLine}}</span>
+      </div>
+      <div class="quiz_numbox" *ngIf="currentUser!=user.playerName">{{getMobileNumberMask(user.playerName)}}
+        <span><img src="assets/cashblast/image/heart_icon.png"> {{user.lifeLine}}</span>
+      </div>
+
+    </li>
+    
+  </ul>
+</div> -->
+<!-- for 4 opponent -->
+<!-- yash
+<div class="quiz_box quiz_box_4" *ngIf="players_length == 4">
+  <ul>
+    <div class="quiz_pricebox"><span>₹50</span></div>
+    <li *ngFor="let user of player; let ind=index;" [ngClass]="['quiz_imgbox'+ind]">
+      <div class="quiz_img"><img src="assets/cashblast/image/quiz_img1.png">
+      <img *ngIf="user.isBomb" class="blst_qimg blast_icon" src="assets/cashblast/image/blast_qimg.png">
+      </div>
+      <div class="quiz_numbox" *ngIf="currentUser==user.playerName">YOU
+        <span><img src="assets/cashblast/image/heart_icon.png"> {{user.lifeLine}}</span>
+      </div>
+      <div class="quiz_numbox" *ngIf="currentUser!=user.playerName">{{getMobileNumberMask(user.playerName)}}
+        <span><img src="assets/cashblast/image/heart_icon.png"> {{user.lifeLine}}</span>
+      </div>
+
+    </li>
+    
+  </ul>
+</div> -->
+<!-- for 5 opponent -->
+<!-- yash
+<div class="quiz_box quiz_box_5" *ngIf="players_length == 5">
+  <ul>
+    <div class="quiz_pricebox"><span>₹50</span></div>
+    <li *ngFor="let user of player; let ind=index;" [ngClass]="['quiz_imgbox'+ind]">
+      <div class="quiz_img"><img src="assets/cashblast/image/quiz_img1.png">
+      <img *ngIf="user.isBomb" class="blst_qimg blast_icon" src="assets/cashblast/image/blast_qimg.png">
+      </div>
+      <div class="quiz_numbox" *ngIf="currentUser==user.playerName">YOU
+        <span><img src="assets/cashblast/image/heart_icon.png"> {{user.lifeLine}}</span>
+      </div>
+      <div class="quiz_numbox" *ngIf="currentUser!=user.playerName">{{getMobileNumberMask(user.playerName)}}
+        <span><img src="assets/cashblast/image/heart_icon.png"> {{user.lifeLine}}</span>
+      </div>
+
+    </li>
+    
+  </ul>
+</div>
+
+
+
+          </div>
+
+</div>
+</div> -->
+
+
+
+
+<!-- <div class="row question-image">
+  <div class="col-xs-12 padd0">
+    <img src="assets/cashblast/image/img-10.jpg">
+
+  </div>
+</div>
+
+
+
+<div class="row progress-play">
+  <div class="col-xs-12 ">
+    <h3>Identify the Bollywood Celebrity</h3>
+
+  </div>
+</div>
+
+<div class="row progress-play-2">
+  <div class="col-xs-12 ">
+    <div class="progress blue">
+      <div class="progress-bar" style="width:70%; background:#FF9800;">
+        <div class="progress-value">5s</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="row quest-four">
+  <div class="col-xs-12 quest-box-m">
+    <div class="result_box-play">
+      <h5><span>01</span>Jacqueline Fernandez</h5>
+    </div>
+  </div>
+  <div class="col-xs-12 quest-box-m">
+    <div class="result_box-play">
+      <h5><span>02</span>Jacqueline Fernandez</h5>
+    </div>
+  </div>
+  <div class="col-xs-12 quest-box-m">
+    <div class="result_box-play">
+      <h5><span>03</span>Jacqueline Fernandez</h5>
+    </div>
+  </div>
+  <div class="col-xs-12 quest-box-m">
+    <div class="result_box-play">
+      <h5><span>04</span>Jacqueline Fernandez</h5>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+</div> -->
+
+
+
+<!-- <div class="row question-image">
+<div class="col-xs-12 padd0">
+  <img src="assets/cashblast/image/img-10.jpg">
+
+</div>
+</div> -->
+<!-- yash
+<ngx-spinner
+bdColor="rgba(51,51,51,0.8)"
+size="medium"
+color="#FF9800"
+type="timer">
+<p style="font-size: 20px; color: #FF9800"></p>
+</ngx-spinner>
+
+<div class="row progress-play">
+<div class="col-xs-12 ">
+  <h3>{{Questions}}</h3>
+
+</div>
+</div>
+
+<div class="row progress-play-2">
+<div class="col-xs-12 ">
+  <div class="progress blue">
+    <div class="progress-bar" [ngStyle]="{'width.%':percent,'background-color':'#FF9800'}" >
+      <div class="progress-value">{{timeLeft}}s</div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<div class="row quest-four" *ngIf="isOption">
+<div class="col-xs-12 quest-box-m"  *ngFor="let Ans of QuesAnsList;let i =index">
+  <div class="result_box-play" >
+    <h5 id = '{{i}}'><button style="width: 100%;
+      background-color: initial;
+      box-shadow: 0px;
+      border: 0px;" [disabled]="isDisabled" (click)="getSelectedAns(Ans,i)"><span>{{i+1}}</span>{{Ans}}</button></h5>
+  </div>
+</div> -->
+<!-- <div class="col-xs-12 quest-box-m">
+  <div class="result_box-play">
+    <h5><span>02</span>Jacqueline Fernandez</h5>
+  </div>
+</div>
+<div class="col-xs-12 quest-box-m">
+  <div class="result_box-play">
+    <h5><span>03</span>Jacqueline Fernandez</h5>
+  </div>
+</div>
+<div class="col-xs-12 quest-box-m">
+  <div class="result_box-play">
+    <h5><span>04</span>Jacqueline Fernandez</h5>
+  </div>
+</div> -->
+
+
+
+<!-- yash 
+</div>
+
+</div> -->

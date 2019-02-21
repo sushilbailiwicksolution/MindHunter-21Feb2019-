@@ -1,0 +1,55 @@
+
+<div class="home_screen">
+    <div class="container">
+        <div  class="col-xs-12 p_0 ">
+            <a class="logo">
+                <img  class="logo-hunter" src="assets/quickwin/image/avtar_img.jpg" (click)="goDashboard()">
+            </a>
+            <span class="header_title"></span>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 banner-area-snap"></div>
+        </div>
+        <div class="row">
+            <div class="home_info">
+                <div class="col-xs-12 p_0">
+                    <!--        
+         <button class="btn play_btn" onclick="playAudio()">Play for 10 Points</button> -->
+         <span *ngFor="let pack of packList;" >
+                    <button  *ngIf="!isActivePlayer"  class="btn play_btn" (click)="playNow(pack)">Play for {{pack.entryFee}} Points</button>
+                </span>
+                <span *ngFor="let pack of packList;" >
+                    <button   *ngIf="isActivePlayer"  class="btn play_btn" (click)="playNow(pack)">Resume</button>
+                </span>
+                    <div class="past_winner">
+                        <div class="past_winnerimg">
+                            <img src="assets/quickwin/image/winner1.jpg"> </div>
+                        <div class="past_winnertext" (click)="getPastWinner()">Past Winner
+                            <span>Himesh Patel</span>
+                            <p>(Rajkot)</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="footer_sec">
+    <div class="container">
+        <ul class="footer_nav">
+            <li (click)="getTc()">
+                <a>T&C</a>
+            </li>
+            <li (click)="getPastWinner()"><a >Past Winner</a></li>
+                   
+            <li (click)="getFaq()">
+                <a>FAQ's</a>
+            </li>
+        </ul>
+    </div>
+</div>
+

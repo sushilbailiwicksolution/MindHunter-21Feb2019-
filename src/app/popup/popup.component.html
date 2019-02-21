@@ -1,0 +1,24 @@
+
+	<div class="col-xs-12 error-main">
+		<div class="col-xs-12 error-box ">
+			<div class="col-xs-12 opps-text">
+		   <div class="col-xs-12">
+				<h4>Oops!</h4>
+			   </div>
+			   <div class="close-opp close" data-dismiss="modal" aria-label="Close" (click)="goBack()">
+			   <!--button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button-->
+				<img width="30px" src="assets/image/error.png">
+			</div>
+		   <div class="col-xs-12 padd0">
+			<p>{{message}}</p>		
+			<!-- <p>we couldn't find anyone now! Please try after sometime. In the meantime we're refunding your entry fees.</p> -->
+			</div>
+		   
+		   <div class="col-xs-12 padd0">
+			   
+				<a class="backgame-btn" (click)="goBack()">Back to Game</a>
+			</div>
+		   
+			</div>
+		</div>	
+	   </div>

@@ -1,0 +1,328 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+  
+  html {
+    font-size: 10px; 
+  }
+  
+  body {
+    font-family: Roboto;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    color: #000;
+    padding: 0; 
+    margin: 0;
+    background: #f0eceb;
+  }
+    
+   .padd0{
+       padding:0px;
+   }
+  .home_screen-2 {
+      width: 100%;
+      min-height: 100vh;
+      background: #fff;
+          padding: 0rem ;
+      overflow: auto;
+          padding-bottom: 6.4rem;
+  }
+  .user_img{
+      position: absolute;
+      width: 100%;
+          left: 8px;
+  }
+  .user_img img {
+      width: 45px;
+      height: 45px;
+      border: 0.3rem solid #292929;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+  }
+  
+  .p-0{
+    padding:0px;
+  } 
+  .logo-area{
+   text-align: center;
+  }
+  .m-top{
+    margin-top: 3.0rem !important;
+  }
+  .full-100{
+    height:100vh;
+  }
+  .m-t-20{
+    margin-top: 2.0rem;
+  }
+  
+  .points-area{
+            padding: 6px 0px 0px 0px;
+  }
+  .points-area h4{
+          color: #e7af27;
+      font-size: 1.4rem;
+      background-color: #f8f1e4;
+      padding: 0.8rem 1.2rem;
+      line-height: 2.4rem;
+      border-radius: 20px;
+      margin: 0px;
+      height: 3.8rem;
+  }
+  .points-area h4 img{
+          width: 22px;
+      float: left;
+      margin-right: 8px;
+  }
+  .promo-text{
+          padding: 0.5rem 0rem 0rem 0rem;
+  }
+  .promo-text p{
+          font-size: 1.4rem;
+      color: #050505;
+      line-height: 2.2rem;
+      text-align: center;
+      background-color: #fff4e1;
+          padding: 0.8rem;
+  }
+  .promo-text img{
+          width: 38px;
+      margin-right: 10px;
+  }
+  .promo-text p span{
+          font-size: 1.4rem;
+          color: #4ea7f4;
+      line-height:2.2rem;
+          text-transform: uppercase;
+  }
+  
+  .mob-nomber{
+          padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 0.5rem;
+  }
+  .mob-nomber p{
+          background-color: #f4f7f3;
+      color: #4563f5;
+      font-size: 1.2rem;
+      text-align: center;
+      border-radius: 20px;
+      padding: 10px 10px;
+  }
+  .coupon-list{
+   background-color: #fff;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      width: 100%;
+      box-shadow: 2px 1px 4px 1px #cccccc;
+  }
+  .main-coupon{
+      padding:0rem 1.0rem ;
+      margin-bottom:1.5rem
+  }
+  .coupon-image  {
+    width: 100%;
+    max-width: 100%;
+    height: 150px;
+        margin-bottom: 6px;
+  }
+  .coupon-image img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .coupon-image p {    
+          position: absolute;
+      top: 8%;
+      right: -8px;
+      background-color: #de3240;
+      color: #fff;
+          padding: 0.5rem 0.5rem 0.5rem 0.8rem;
+      font-size: 1.2rem;
+      border-top-left-radius: 1.0rem;
+      border-bottom-left-radius: 1.0rem;
+  }
+  .coupon-image p:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 28px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-top: 10px solid #A42F25;
+      border-right: 10px solid transparent;
+  }
+  
+  
+  .coupon-text{
+   width:100%;
+   padding:0rem 0.2rem;
+  }
+  .coupon-text p{
+          font-size: 1.0rem;
+      text-align: left;
+      color: #424242;
+      margin-bottom: 0.2rem;
+      line-height: 1.4rem;
+      height: 3.2rem;
+      
+  }
+  
+  .buy-list {
+      background-color: #fff;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      width: 100%;
+      box-shadow: 2px 1px 4px 1px #cccccc;
+          margin-bottom: 1.8rem;
+  }
+  .buy-img img{
+          width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+  }
+  .buy-detail{
+      padding-right:0px;
+  }
+  .buy-detail h4{
+      margin-top: 0.5rem;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      color: #6b6b6b;
+      font-weight: 500;
+  }
+  .buy-detail button {
+          font-size: 1.4rem;
+      line-height: 1.8rem;
+      color: #000;
+      font-weight: 600;
+      background-color: initial;
+      border: 1px solid #a5a5a5;
+      padding: 0.8rem 1.0rem;
+  }
+  
+  .buy-detail p {
+          position: absolute;
+          bottom: -5%;
+      right: -14px;
+      background-color: #de3240;
+      color: #fff;
+      padding: 0.5rem 0.5rem 0.5rem 0.8rem;
+      font-size: 1.2rem;
+      border-top-left-radius: 1.0rem;
+      border-bottom-left-radius: 1.0rem;
+  }
+  .buy-detail p:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 28px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-top: 10px solid #A42F25;
+      border-right: 10px solid transparent;
+  }
+  
+  
+  
+  
+  .m-foot-quest{
+          padding: 20px 5px;
+      background-color: #eaeff9;
+      position: fixed;
+      width: 100%;
+      bottom: 0px;
+  
+   }
+   .footer-text-quest {
+      padding: 0px 4px;
+      border-right: 0px solid #08ace9;
+      margin-top: 0rem;
+  }
+  .footer-text-quest:last-child {
+      padding: 0px 4px;
+      border-right: 0px solid #08ace9;
+      margin-top: 0rem;
+  }
+  .footer-text-quest p {
+      font-size: 1.4rem;
+          color: #4563f5;
+      text-align: left;
+      margin: 0px;
+      text-align: center;
+      text-transform: uppercase;
+  }
+  
+  
+  .m-t-60{
+      margin-top:6.0rem;
+  }
+  
+  .d-logo{
+      padding-top: 10px;
+  }
+  .d-logo img{
+      max-width:100%;
+  }
+  
+  .redeem-text{
+      margin-bottom: 1.5rem;
+  }
+  .redeem-text h4{
+      text-align: center;
+      margin-top: 0px;
+      font-size: 1.8rem;
+      color: #000;
+      font-weight: bold;
+  }
+  
+  
+  /*--------logo area------------------------*/
+  
+  
+  @media (max-width:361px) {
+      .points-area h4 {
+          color: #e7af27;
+          font-size: 1.2rem;
+          background-color: #f8f1e4;
+          padding: 0.8rem 1.0rem;
+          line-height: 2.4rem;
+          border-radius: 20px;
+          margin: 0px;
+          height: 3.8rem;
+      }
+      
+      .mob-nomber p {
+          background-color: #f4f7f3;
+          color: #4563f5;
+          font-size: 1.0rem;
+          text-align: center;
+          border-radius: 20px;
+          padding: 10px 6px;
+      }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

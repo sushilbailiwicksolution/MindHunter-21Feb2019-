@@ -1,0 +1,90 @@
+<body id="pp_los">
+<div class="pool_home_screen">
+  <div class="container">
+    <div class="pool_home_info">	
+      <div class="col-xs-12 p_0">
+        <div class="pool_header">
+        <!-- <div class="col-xs-2 padd0">
+          <a href="javascript:void(0);" class="menu_icon">
+            <img src="assets/poolprize/image/pool_logo.jpg">
+          </a>
+          </div> -->
+          <div class="col-xs-2 p_0">
+              <a class="logo">
+                <img class="logo-hunter" src="assets/poolprize/image/pool_logo.jpg" (click)="getHome()">
+              </a>
+            </div>
+          <div class="col-xs-8 padd0">
+          <h3 class="pool_quiztitle">Pool Prize </h3>
+          </div>
+          <div class="col-xs-2 padd0"></div>
+          <div class="col-xs-12  padd0">
+          <h2>OOPS!</h2>
+          </div>
+        </div>
+        <!-- progressbar start -->	
+            <div class="progress_info">
+                <div class="progress" data-percentage="percent">
+                    <span class="progress-left">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value">
+                        <div>
+                            <span>Score</span>
+                            {{score}}/{{totalQuestion}}<br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- progressbar end -->
+        <div class="pool_prize_oopsbox">
+          <p>We are sure you can perform better <span> Play again and get a chance to win prize. </span></p>
+
+          <div class="pool_prize_title">
+            <div class="col-xs-2 p_0"><h5>Tier</h5></div>
+            <div class="col-xs-3 p_0"><h5>Score</h5></div>
+            <div class="col-xs-7 p_0"><h5>Winning Points</h5></div>
+          </div>
+          <div class="pool_prize_price" *ngFor ="let tier of tiers, let i = index">
+              <div class="col-xs-2 p_0" ><h6 id="h1_{{i}}">{{i+1}}</h6></div>
+              <div class="col-xs-3 p_0" ><h6 id="h2_{{i}}">{{tier.noOfQuestion}}/{{totalQuestion}}</h6></div>
+              <div class="col-xs-7 p_0" ><h6 id="h3_{{i}}">{{tier.reward | number : "" : "" }}</h6></div>
+            </div>
+            <!-- <div class="pool_prize_price" >
+              <div class="col-xs-2 p_0"><h6 id="h1_19">2</h6></div>
+              <div class="col-xs-3 p_0" ><h6 id="h2_19">19/20</h6></div>
+              <div class="col-xs-7 p_0" ><h6 id="h3_19">20,000</h6></div>
+            </div>
+            <div class="pool_prize_price " >
+              <div class="col-xs-2 p_0" ><h6 id="h1_18"> 3</h6></div>
+              <div class="col-xs-3 p_0" ><h6 id="h2_18">18/20</h6></div>
+              <div class="col-xs-7 p_0" ><h6 id="h3_18">10,000</h6></div>
+            </div> -->
+          <div class="clearfix"></div>
+        </div>				<div class="new-block-clr">
+        <div class="pool_timeplay">
+          Time Left to Play : <span>{{days}}d: {{hours}}h :{{minutes}}m: {{seconds}}s</span>
+        </div>
+        <button class="btn pool_playbtn"  (click)="replay()">
+          Play Now <span>{{pentryFee}} Points</span>
+        </button>
+        <div class="pool_quize_btntext">
+          To get eligible for Tier {{tier}} Winning Pool Prize Points
+          <span>{{winningamt | number : "" : "" }}</span>
+          <!-- <span *ngIf ="score==19">20,000</span>
+          <span *ngIf ="score==18">10,000</span> -->
+        </div>									
+      	</div>
+        <div class="pool_quize_btntext">
+          All players with a qualifying score will get an equal share of that tier of Pool Prize. You can play multiple times and your BEST SCORE of the day will be considered. 
+        </div>
+
+      </div>	
+    </div>
+  </div>
+  
+</div>	
+</body>

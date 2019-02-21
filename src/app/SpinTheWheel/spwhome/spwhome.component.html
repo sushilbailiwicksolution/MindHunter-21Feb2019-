@@ -1,0 +1,69 @@
+<!-- <iframe src="assets/sound/song1.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+  </iframe>  -->
+<div class="spin_body spin_home_screen">
+   <div class="spin_header">
+          <div class="container">
+              <div class="col-xs-12 p_0">
+                  <a href="javascript:void(0);">
+                      <img src="assets/spinthewheel/image/spin_logo.png">
+                  </a>
+                  <h4>Spin The Wheel</h4>
+                  <p style="color: white">India's most Trusted Cash skill-games site</p>
+              </div>
+          </div>
+    </div>
+
+
+  <div class="container">
+    <div class="spin_home_info">
+      <div class="col-xs-12 p_0">
+        <!-- spin-wheel start -->
+
+        <div class="spin_box">
+          <div [id]="wheelId">
+            <div id="inner-wheel" class="spin_wheelbg" [ngStyle]="{'transform':transf}">
+
+              <div class="sec" *ngFor="let val of wheelAry;" [ngStyle]="val.bgColor" >
+                <span class="fa" id="spinitem">
+                  <img src={{val.imgUrl}} *ngIf="val.imgUrl != 'NA'" width="45" height="30"/><p>{{val.text}}<br>Rs.{{val.price}}</p></span>
+              </div>
+<!-- 
+                <span class="fa" id="spinitem"><p>{{val}}</p></span>
+              </div> -->
+
+
+              <!-- <div class="sec" *ngFor="let val of startWheel" [ngStyle]="{ 'border-color':val.bgColor }"><span class="fa fa-bell-o" id="spinitem">{{val}}</span></div>
+               <div class="sec"><span class="fa fa-comment-o" id = "spinitem">2</span></div> -->
+              <!--   <div class="sec"><span class="fa fa-smile-o" id = "spinitem">3</span></div>
+                          <div class="sec"><span class="fa fa-heart-o" id = "spinitem">4</span></div>
+                          <div class="sec"><span class="fa fa-star-o" id = "spinitem">5</span></div>
+                          <div class="sec"><span class="fa fa-lightbulb-o" id = "spinitem">6</span></div>
+                      -->
+            </div>
+            <button (click)="getstartWheel()" [disabled]="isDisabled">
+              <div id="spin">
+                  <img src="assets/spinthewheel/image/spin_wheelbtn.png">
+                <div id="inner-spin"></div>
+              </div>
+            </button>
+            <div id="shine"></div>
+          </div>
+
+        </div>
+        <!-- spin-wheel end -->
+        <div class="spin_belowtext">Spin Now and Win Real Cash Instantly ! Tap the wheel anywhere to spin</div>
+      </div>
+    </div>
+  </div>
+  <footer class="spin_footer">
+    <div class="container">
+      <div class="spin_footer_nav">
+        <ul>
+          <li>
+            <a href="javascript:void(0);">T &amp; C</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>

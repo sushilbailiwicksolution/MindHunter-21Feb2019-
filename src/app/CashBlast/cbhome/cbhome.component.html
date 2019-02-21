@@ -1,0 +1,187 @@
+
+
+<body id="cb_home">
+<div class="home_screen">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="home_info">
+					<div class="col-md-12 padd0">
+						<div class="user_img">
+							<img src="assets/cashblast/image/avtar_img.jpg" (click)="getHome()">
+							<span class="user_mno">+91 {{getMobileNumberMask(regMobileNo)}}</span>
+						</div>
+					</div>
+					<div class="col-md-12 padd0">
+						<div class="blast_img">
+							<img src="assets/cashblast/image/q-logo.png">
+							<span class="blast_icon"><img src="assets/cashblast/image/icon1-1.gif"></span>
+						</div>
+					</div>
+
+			
+
+					<div class="col-md-12 padd0 clfs">
+						<div class="how_playbox">
+							<button class="how_playbtn" (click)="howToPlay()">How To Play</button>
+						</div>
+					</div>
+
+				
+					
+					<div class="col-md-12 for-play padd0">
+						<div class="play_btnprice">
+							<div class="col-md-12" *ngFor="let pack of packList">
+								<a [attr.disabled]="isDisabled" (click)='gameHosted(pack)'> 
+									<h5 >{{pack.entryText}}<span>{{pack.winnerMsg}}</span></h5>
+									<h6>
+										{{pack.onlinePlayer}}<span>Online Players</span><img src="assets/cashblast/image/play-1.png"> </h6>
+								</a>
+							</div>   
+							<!-- <div class="col-md-12">
+								<a href="javascript:void(0);">
+									<h5>Play for 10 Point<span>Win Upto 40 Points</span></h5>
+									<h6>30<span>Online Players</span> <img src="assets/cashblast/image/play-1.png"></h6>
+								</a>
+							</div>
+							<div class="col-md-12">
+								<a href="javascript:void(0);">
+									<h5>Play for 20 Point<span>Win Upto 80 Points</span></h5>
+									<h6>50<span>Online Players</span> <img src="assets/cashblast/image/play-1.png"></h6>
+								</a>
+							</div> -->
+						</div>
+					</div>
+
+				
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12  footer-links ">
+				<div class="col-md-12">
+					<ul>
+						<li (click) = "getHelp()">Support</li>
+						<li (click) = "getRules()">FAQs</li>
+						<li (click) = "getTc()">T & C</li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<ngx-spinner
+	bdColor="rgba(51,51,51,0.8)"
+	size="medium"
+	color="#FF9800"
+	type="timer">
+   <p style="font-size: 20px; color: #FF9800"></p>
+  </ngx-spinner>
+
+</div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  10/1/19
+<div class="home_screen">
+	<div class="container">
+			
+		<div class="col-xs-12">
+			<div class="home_info">
+				<div class="user_img">
+					<img src="assets/cashblast/image/avtar_img.jpg">
+					<span class="user_mno">+91 {{getMobileNumberMask(regMobileNo)}}</span>
+				</div>
+				<div class="blast_img">
+					<img src="assets/cashblast/image/blast_img.png">
+					<span class="blast_icon"><img src="assets/cashblast/image/blast_icon.png"></span>
+				</div>
+				<div class="col-xs-12">
+					<ul class="help_box">
+						<li><a routerLink="help"><img src="assets/cashblast//image/icon_1.png"><span>SUPPORT</span></a></li>
+
+						<li><a href="javascript:void;"><img src="assets/cashblast/image/icon_2.png"><span>RULES</span></a></li>
+
+						<li><a routerLink="tc"><img src="assets/cashblast/image/icon_3.png"><span>T&C</span></a></li>
+
+						<li><a href="javascript:void;"><img src="assets/cashblast/image/icon_4.png"><span>Blog</span></a></li>
+
+						<li><a href="javascript:void;"><img src="assets/cashblast/image/icon_5.png"><span>Invite</span></a></li>
+
+
+					</ul>
+				</div>
+				<div class="col-xs-12">
+				<div class="play_btnprice">
+						<div *ngFor="let pack of packList">
+
+								<a  style="cursor: pointer;" (click)='gameHosted(pack)' >
+									<h5>Play {{pack.packTitle}}. {{pack.entryFee}}<span></span></h5>
+									<h6>20<span>Online Players</span></h6>
+								</a>
+							</div> -->
+
+
+
+<!-- <div >
+
+						<a (click)="gameHosted()">
+							<h5>Play for Rs. 1<span>Win Upto Rs. 10</span></h5>
+							<h6>20<span>Online Players</span></h6>
+						</a>
+					</div>
+					<div>
+						<a routerLink="opponent">
+							<h5>Play for Rs. 1<span>Win Upto Rs. 4</span></h5>
+							<h6>20<span>Online Players</span></h6>
+						</a>
+					</div>
+					<div>
+						<a routerLink="opponent">
+							<h5>Play for Rs. 1<span>Win Upto Rs. 4</span></h5>
+							<h6>20<span>Online Players</span></h6>
+						</a>
+					</div> -->
+
+
+
+
+<!-- 	10/1/19				
+				</div>
+			</div>
+
+				<div class="how_playbox">
+					<div class="arrow_box">
+						<span class="btn_arrows arrow_1"></span>
+						<span class="btn_arrows arrow_2"></span>
+						<span class="btn_arrows arrow_3"></span>
+						<span class="btn_arrows arrow_4"></span>
+						<span class="btn_arrows arrow_5"></span>
+						<span class="btn_arrows arrow_6"></span>
+						<span class="btn_arrows arrow_7"></span>
+						<span class="btn_arrows arrow_8"></span>
+						<span class="btn_arrows arrow_9"></span>
+						<span class="btn_arrows arrow_10"></span>
+					</div>
+					<button class="how_playbtn" (click)="payment()">Payment</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</div> -->

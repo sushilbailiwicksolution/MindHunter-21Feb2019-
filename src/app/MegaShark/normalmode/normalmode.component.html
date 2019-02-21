@@ -1,0 +1,84 @@
+<div class="bg-m-4">
+	<div class="container-fluid">
+	 <div class="row m-header-white">
+	   <div class="col-xs-12 padd0">
+	   	<div class="col-xs-2 padd0">
+	   		<img width="40px" src="assets/megashark/image/mega-logo.PNG">	
+	   	</div>
+	   	<div class="col-xs-8 normal-head padd0">
+	   		<h4>NORMAL MODE</h4>
+	   	</div>
+	   	<div class="col-xs-2"></div>
+	   </div>
+	</div>
+   </div>
+
+   <div class="container-fluid">
+	 <div class="row m-header-2">
+	   <div class="col-xs-3 Attended-box padd0">
+	   	<button (click)="scoreBoard()">{{attentedQues}}</button>
+	   	<h4>Attempted Question</h4>
+	   </div>
+	   <div class="col-xs-3 Attended-box padd0">
+	   	<button (click)="scoreBoard()">{{remainQues}}</button>
+	   	<h4>Remaining Question</h4>
+	   </div>
+	   <div class="col-xs-3 Attended-box padd0">
+	   	<button (click)="scoreBoard()">{{score}}</button>
+	   	<h4>Total Score</h4>
+	   </div>
+	   <div class="col-xs-3 Attended-box padd0">
+	   	<button>{{todayScore}}</button>
+	   	<h4>Today's Score</h4>
+	   </div>
+	</div>
+   </div>
+
+   <div class="container-fluid">
+	 <div class="row banner-area">
+	   <img [src]="normal_qImage">
+	</div>
+   </div>
+
+   <div class="container-fluid">
+	 <div class="row ">
+	 	<div class="col-xs-12 who-text">
+	 		<h4>{{Ques_text}}?</h4>
+	 	</div>
+	   
+	</div>
+   </div>
+
+   <ngx-spinner
+   bdColor="rgba(51,51,51,0.5)"
+   size="medium"
+   color="#FF9800"
+   type="timer">
+  <p style="font-size: 20px; color: #FF9800"></p>
+ </ngx-spinner>
+
+
+   <div class="container-fluid">
+	 <div class="row ">
+	 	<div class="col-xs-12">
+	 		<div class="col-xs-12 quest-four" *ngFor="let ans of normal_QuesAnsList; let i = index" id='{{i}}'(click)="getSelectedAns(ans,i)">
+				
+	 		<div class="col-xs-2 count-area">
+	 			<h4>{{i+1}}</h4>
+	 		</div>
+	 		<div class="col-xs-8 answ-text">
+	 			<h4>{{ans}}</h4>
+			 </div>
+			
+	 		<div class="col-xs-2"></div>
+	 	 </div>
+	 	 
+	 	 <div class="col-xs-12 switch-area">
+	 	 	<a (click)="goForPack()">SWITCH TO BOOSTER MODE</a>
+	 	 </div>
+
+	   </div>
+	</div>
+   </div>
+
+</div>

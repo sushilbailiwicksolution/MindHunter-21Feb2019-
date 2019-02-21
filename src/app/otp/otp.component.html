@@ -1,0 +1,23 @@
+<div class="home_screen">
+  <div class="container">
+    <div class="col-xs-12">
+      <div class="login_info">
+        <h3 class="sec_title_text">OTP SENT</h3>
+          <h6 >Do not leave this page password change in progress</h6>
+
+          <h3 class="sec_title_text"> Verification</h3>
+<h6>Enter OTP Verify your mobile number Sent to +91{{getMobileNumberMask(mobileNo)}}</h6>
+
+        <form [formGroup]="otpForm" (ngSubmit)="verifyOtp()" class="support_form">
+          <div class="input-group">
+            <input id="otp" type="text" formControlName="otp"  class="form-control otp_input" name="otp"  inputmode="numeric" pattern="[0-9]*" digitOnly minlength="6" maxlength="6"value="452001" >
+          </div>
+          <button type="submit" class="btn btn-default login_btn" (click)="resendOtp()">RE-Send OTP</button>
+          <div class="clearfix"></div>
+          <button type="submit" class="btn btn-default login_btn">VERIFY</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>	

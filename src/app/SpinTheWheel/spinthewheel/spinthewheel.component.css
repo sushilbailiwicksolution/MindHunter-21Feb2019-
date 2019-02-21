@@ -1,0 +1,236 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background: #12032C;
+	font-family: 'tofino_medium';
+}
+
+@font-face {
+    font-family: 'tofino_medium';
+    src: url('src/assets/spinwheel/css/fonts/tofino-medium_0-webfont.woff2') format('woff2'),
+         url('src/assets/spinwheel/css/fonts/tofino-medium_0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'tofino_bold';
+    src: url('src/assets/spinwheel/css/fonts/tofino-bold_0-webfont.woff2') format('woff2'),
+         url('src/assets/spinwheel/css/fonts/tofino-bold_0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	outline: none;
+}
+
+.container {
+	background: url(src/assets/spinwheel/images/bg_wo_logo.png) center top no-repeat;
+	max-width: 720px;
+	margin: 0 auto;
+	min-height: 100%;
+	background-size: 100% 100%;
+	overflow: hidden;
+	position: fixed;
+}
+
+h1 {
+	margin-bottom: 0;
+	padding: 0 30px;
+}
+
+header {
+	display: block;
+	text-align: center;
+}
+
+.wheel-wrap {
+	position: relative;
+	padding: 0 20px 0;
+}
+
+.wheel-wrap .topPointer {
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	width: 100%;
+	max-width: 17.72%;
+	transform: translate(-50%, 0);
+}
+
+.wheel-wrap .topPointer img {
+	position: relative;
+	width: 100%;
+}
+
+.wheel-wrap .botPointer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	max-width: 29%;
+	transform: translate(-50%, -50%);
+}
+
+.wheel-wrap .innerWheel {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 70%;
+    transform: translate(-50%, -51%);
+}
+
+.wheel-wrap .innerWheel .wheel {
+	position: relative;
+	width: 100%;
+}
+
+.spinNow {
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	color: #FED71D;
+	font-size: 22px;
+	text-transform: capitalize;
+	text-align: center;
+	padding: 20px;
+	margin: 0 20px 20px;
+}
+
+.tapAnywhere{
+	color: #fff;
+	font-size: 16px;
+	text-transform: capitalize;
+	text-align: center;
+	margin: 0 20px 20px;
+}
+
+.stepTwo {
+	text-align: center;
+	display: none;
+}
+
+.congratulation {
+	padding: 50px 20px 20px;
+	text-align: center;
+}
+
+.won {
+	width: 68%;
+	border-radius: 10px;
+	background: rgba(0,0,0,0.5);
+	padding: 20px;
+	border: 1px solid rgba(255,255,255,0.5);
+	margin: 30px auto 0;
+	font-size: 30px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.won span {
+	display: block;
+	text-transform: capitalize;
+	color: #FED71D;
+	font-family: 'tofino_bold';
+}
+.won em {
+	font-style: normal;
+}
+
+.claim {
+	color: #fff;
+	padding: 60px 20px 20px;
+	font-size: 27px;
+	text-align: center;
+}
+
+.claim input {
+	width: 68%;
+	padding: 10px;
+	-webkit-box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.34);
+	-moz-box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.34);
+	box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.34);
+	background: #fff;
+	border: none;
+	font-size: 27px;
+	border-radius: 5px;
+}
+
+.claim em {
+	display: block;
+	font-style: normal;
+	margin-bottom: 10px;
+}
+
+.claim span {
+	display: block;
+	font-size: 22px;
+	color: #FED71D;
+}
+
+.claim a {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	max-width: 48%;
+	margin: 0 auto;
+}
+
+.oops .claim em:last-of-type {
+	font-size: 23px;
+	margin-top: 30px;
+}
+
+.oops .claim span {
+	padding-top: 40px;
+	font-size: 27px;
+}
+
+.tNc {
+	padding: 50px 10px 10px;
+	text-align: right;
+	color: #fff;
+}
+
+.tNc a {
+	font-size: 13px;
+	text-decoration: none;
+	color: inherit;
+}
+
+.oops {
+	display: none;
+}
+
+.playFree {
+	max-width: 89%;
+	margin: 0 auto;
+	background-size: 100% 100%;
+	overflow: hidden;
+	padding: 13px;
+	font-family: 'tofino_bold';
+}
+
+@media only screen and (max-width: 400px) {
+	.wheel-wrap .innerWheel{
+    	max-width: 66%;
+	}
+
+	.stepTwo .won{
+		font-size: 22px;
+	}
+
+	.stepTwo .claim,
+	.stepTwo .claim input {
+		font-size: 22px;
+	}
+
+	.stepTwo .claim span {
+		font-size: 18px;
+	}
+}

@@ -1,0 +1,246 @@
+<body id="cb_opponent">
+  <div class="home_screen">
+    <div class="container-fluid ">
+      <div class="sound-icon">
+        <img src=" assets/cashblast/image/icon-sound.png"  (click)="sound()">
+      </div>
+      <div class="row count-main">
+        <div class="col-xs-3 p_0">
+          <a  class="oppo_logo">
+            <img class="logo-hunter" src="assets/poolprize/image/pool_logo.jpg" (click)="backToHome()">
+          </a>
+        </div>
+        
+        <div class="start-count">
+          <h5>{{timerValue}}</h5>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="logo_imgbox">
+            <div class="blast_img">
+              <img src="assets/cashblast/image/q-logo.png">
+              <span class="blast_icon">
+                <img src="assets/cashblast/image/icon1-1.gif">
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="g-circul">
+          </div>
+        </div>
+        <div class="quiz_box quiz_box_4">
+          <ul>
+            <div  *ngIf="denomination === 'Points'" class="quiz_pricebox1">
+              <p><span >{{reward}}</span> {{denomination}}</p> 
+            </div>
+            <div *ngIf="denomination !== 'Points'" class="quiz_pricebox2">
+              <p><span  >{{denomination}}</span> {{reward}}</p>
+            </div>
+
+            <li class="quiz_imgbox1">
+              <div style="border: 0.3rem solid #ec7a00;" class="quiz_img">
+                <img src="assets/cashblast/image/avtar_img.jpg">
+
+              </div>
+
+
+              <div class="number-box-2">
+                <p>
+                  <i class="fa fa-heart red-co" aria-hidden="true"></i> 3
+                  <span>YOU</span>
+                </p>
+              </div>
+
+            </li>
+            <li class="quiz_imgbox2">
+              <div class="quiz_img">
+                <img src="assets/cashblast/image/avtar_img.jpg">
+
+              </div>
+            </li>
+            <li class="quiz_imgbox3">
+              <div class="quiz_img">
+                <img src="assets/cashblast/image/avtar_img.jpg">
+
+              </div>
+            </li>
+            <li class="quiz_imgbox4">
+              <div class="quiz_img">
+                <img src="assets/cashblast/image/avtar_img.jpg">
+
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+
+      </div>
+      <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#FF9800" type="timer">
+        <p style="font-size: 20px; color: #FF9800"></p>
+      </ngx-spinner>
+
+      <div class="row ">
+        <div class="col-xs-12 Search-for">
+          <h4>Searching for opponents</h4>
+          <p>{{player.length}} Player in queue</p>
+        </div>
+      </div>
+
+      <div class="row ">
+        <div class="col-xs-12 refund-text">
+          <p>If we are unable to match you, we will refund your money.</p>
+        </div>
+      </div>
+
+      <div class="row ">
+        <div class="col-xs-12 foot-cash ">
+
+          <h4>
+            <img src="assets/cashblast/image/icon-2.png"> QUIZ BOMB is played with real people in real time</h4>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 
+yash
+<div class="container-fluid m-bg">
+
+  <div class="row count-main">
+    <div class="start-count">
+      <h5>{{timerValue}}</h5>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="blast_img">
+        <img src="assets/cashblast/image/blast_img.png">
+        <span class="blast_icon"><img src="assets/cashblast/image/blast_icon.png"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container"> -->
+  <!-- <div class="game-m-box">
+
+      <div class="col-xs-12 ">
+        <div class="g-circul">
+        </div>
+      </div>
+
+
+
+      <div class="col-xs-12 game-row-1">
+        <div class="profile-box">
+          <img src="assets/cashblast/image/play-game.gif">
+        </div>
+      </div>
+
+      <div class="col-xs-12 game-row-2">
+        <div class="col-xs-6 circul-box">
+          <div class="profile-box">
+            <img src="assets/cashblast/image/play-game.gif">
+          </div>
+        </div>
+        <div class="col-xs-6 circul-box">
+          <div class="profile-box">
+            <img src="assets/cashblast/image/play-game.gif">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-xs-12 game-row-4">
+        <div class="profile-box">
+          <img src="assets/cashblast/image/icon-3.png">
+        </div>
+      </div>
+
+      <div class="col-xs-12 game-row-3">
+        <div class="profile-box">
+          <img src="assets/cashblast/image/snorlax.png">
+        </div>
+        <div class="col-xs-12 you-main ">
+          <div class="count-box">
+            <div class="arrow-you">
+
+              <div class="count-box-2">
+                <div class="arrow-you-2">
+                  <p><i class="fa fa-heart red-co" aria-hidden="true"></i> 03</p>
+                </div>
+              </div>
+
+              <p>{{currentUser}}</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>  -->
+
+  <!-- yash
+    <div class="quiz_box">
+      <ul class="quiz_circle">
+        <div class="quiz_pricebox"><span>₹20</span></div>
+        <li  *ngFor="let user of player; let ind=index;" [ngClass]="['quiz_imgbox'+ind]">
+          <div class="quiz_img"><img src="assets/cashblast/image/play-game.gif"> -->
+
+
+  <!-- <img class="blst_qimg" src="assets/cashblast/image/blast_qimg.png"> -->
+  <!-- YAsh</div>
+          <div class="quiz_numbox">{{getMobileNumberMask(user.playerName)}} -->
+  <!-- <span><img src="assets/cashblast/image/heart_icon.png"> 5</span> -->
+  <!-- yash </div>
+
+        </li>
+        
+      </ul>
+    </div>
+
+    <div class="row ">
+      <div class="col-xs-12 Search-for">
+        <h4>Searching For Opponents</h4>
+        <p>{{player.length}} Player in Queue</p>
+      </div>
+    </div>
+
+    <div class="row ">
+      <div class="col-xs-12 foot-cash padd0">
+        <p>If we are unable to match you, we will refund your money.</p>
+        <h4><img src="assets/cashblast/image/icon-2.png"> <a routerLink="playquestion">CASH BLAST is played with real
+            people in real time</a></h4>
+      </div>
+    </div>
+
+  </div>
+
+</div> -->

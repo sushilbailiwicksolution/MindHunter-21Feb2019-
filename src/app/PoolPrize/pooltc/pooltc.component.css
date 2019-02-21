@@ -1,0 +1,931 @@
+* {
+	
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+#pp_tc{
+    background: #3b4155;
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+	font-family: Roboto;
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.8rem;
+	color: #f00;
+	padding: 0;
+	margin: 0;
+	background: #fff;
+}
+
+.p_0 {
+	padding: 0rem;
+}
+
+.bg_white {
+	background: #fff;
+}
+
+.bg_yellow {
+	background: #ffd707;
+}
+
+.pool_prize_body {
+	background: #3a3d47;
+}
+
+.pool_home_screen {
+	width: 100%;
+    height: auto;
+    padding: 2rem 0rem 0rem 0rem;
+    overflow: auto;
+}
+
+.pool_header {
+	width: 100%;
+	overflow: hidden;
+}
+.pool_header h2 {
+	    font-size: 4.2rem;
+    font-weight: bold;
+    color: #fff;
+    line-height: 3.0rem;
+    text-align: center;
+    margin-bottom: 8px;
+}
+.menu_icon {
+	display: block;
+	z-index: 99;
+	text-decoration: none !important;
+	float: left;
+}
+
+.menu_icon img {
+	width: 3rem;
+}
+
+.menu_icon .fa {
+	color: #fff;
+	font-weight: 300;
+	font-size: 3rem;
+	padding: 0 0.5rem;
+}
+
+.pool_quiztitle {
+	color: #fff;
+	font-size: 2.4rem;
+	font-weight: 600;
+	margin: 0.6rem 0rem 0rem 0rem;
+	text-align:center;
+}
+
+
+.pool_banner {
+	margin: 2rem 0rem 1rem 0rem;
+	width: 100%;
+}
+
+.pool_banner .carousel-inner {
+	border-radius: 1rem;
+}
+
+.pool_banner .carousel-indicators {
+	bottom: -3rem;
+}
+
+.pool_banner .carousel-indicators li {
+	width: 0.8rem;
+	height: 0.8rem;
+}
+
+.pool_banner .carousel-indicators .active {
+	width: 1rem;
+	height: 1rem;
+}
+
+.pool_prizebox {
+	overflow: hidden;
+	width: 100%;
+	padding: 1rem 0rem 0rem 0rem;
+	margin: 1rem 0rem 1rem 0rem;
+}
+
+.btn.pool_playbtn.pool_howply {
+	padding: 0.5rem 1.5rem;
+	font-size: 1.6rem;
+	margin-top: 0rem;
+	background: #6774bf;
+	width: auto;
+	margin: 0 auto;
+}
+
+.pool_prizebox h3 {
+	color: #dac54a;
+	text-align: center;
+	font-size: 2.4rem;
+	font-weight: 600;
+	margin: 0;
+}
+
+.pool_prizebox h5 {
+	color: #dac54a;
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+
+.pool_prize_title {
+	margin-top: 2rem;
+	overflow: hidden;
+}
+
+.pool_prize_price {
+	overflow: hidden;
+}
+
+.pool_prize_title h5 {
+	color: #fff;
+	text-align: center;
+	font-size: 1.6rem !important;
+	font-weight: 500;
+	margin: 0 0.5rem 1rem 0.5rem;
+}
+
+.pool_prize_price h6 {
+	    color: #fff;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    background: #49506a;
+    padding: 1.6rem 0.8rem;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.pool_prizebox p {
+	color: #fff;
+	padding: 1rem 0rem;
+	text-align: center;
+	font-size: 1.6rem;
+	font-weight: 300;
+	margin: 0;
+}
+
+.pool_timeplay {
+	    color: #fff;
+    font-size: 2.0rem;
+    text-align: center;
+    padding: 2.5rem 0 2rem;
+    line-height: 3.0rem;
+}
+
+.pool_timeplay span {
+	color: #ff6935;
+    font-size: 2.0rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.btn.pool_playbtn {
+	    background: #00b50c;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none !important;
+    transition: 0.3s;
+    width: 70%;
+    display: block;
+    margin: auto;
+}
+
+.btn.pool_playbtn span {
+	padding-left: 3rem;
+	    float: right;
+}
+
+.btn.pool_playbtn:hover {
+	background: #dac54a;
+	color: #000;
+}
+
+.pool_footer_sec {
+	background: #3a3d47;
+	padding: 1.5rem 0rem;
+	z-index: 9;
+	width: 100%;
+	bottom: 0;
+}
+
+.pool_footer_nav ul {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+.pool_footer_nav ul li {
+	display: inline-block;
+	list-style: none;
+}
+
+.pool_footer_nav ul li a {
+	color: #fff;
+	padding: 0rem 1.3rem;
+	border-left: 0.2rem solid #fff;
+	text-decoration: none !important;
+	text-transform: uppercase;
+}
+
+.pool_footer_nav ul li:first-child a {
+	padding-left: 0;
+	border-left: 0rem;
+}
+
+
+/*pool quize page start*/
+
+.pool_quiz_scorebord {
+	overflow: hidden;
+	width: 100%;
+	padding: 0rem 0rem 0rem 0rem;
+	margin-top: 1rem;
+}
+
+.pool_quiz_scorebord .pool_prize_price h6 {
+	background: #414855;
+	font-weight: 300;
+}
+
+.pool_quiz_scorebord .pool_prize_title h5 {
+	font-weight: 300;
+}
+
+.pool_quiz_info {
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+}
+
+.pool_quizimg {
+	text-align: center;
+	padding-top: 1.5rem;
+}
+.pool_quizimg img {
+	width:100%;
+}
+
+.pool_quiztext {
+	color: #373737;
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 1rem 0rem 1rem 0rem;
+    line-height: 2.8rem;
+}
+
+.pool_quizbtnbox {
+	overflow: hidden;
+	margin-top: 6rem;
+}
+
+.btn.pool_quizbtn {
+	background: transparent;
+	color: #fff;
+	font-size: 2.2rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	display: block;
+	text-align: center;
+	padding: 1rem;
+	margin: 1rem 0rem 1rem 0rem;
+	border-radius: 1rem;
+	border: 0.1rem solid #fff;
+	outline: none !important;
+	transition: 0.3s;
+	width: 100%;
+}
+
+.btn.pool_quizbtn:hover,
+.btn.pool_quizbtn:focus,
+.btn.pool_quizbtn.active {
+	background: #fff;
+	color: #383838;
+}
+
+
+/*pool prize section end*/
+
+
+/*pool prize oops css start*/
+
+.pool_quiztitle span {
+	    display: block;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding-left: 1rem;
+}
+
+
+/*progressbar start */
+
+.progress_info {
+	width: 100%;
+	overflow: hidden;
+	margin: 1rem 0rem;
+}
+
+.progress_info>.progress {
+	width: 21rem;
+	height: 21rem;
+	line-height: 13rem;
+	background: none;
+	margin: 0 auto;
+	box-shadow: none;
+	position: relative;
+	background: #272c3a;
+	border-radius: 50%;
+	transform: rotate(-105deg);
+}
+
+.progress_info>.progress:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 0.7rem solid #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.progress_info>.progress>span {
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+
+.progress_info>.progress .progress-left {
+	left: 0;
+}
+
+.progress_info>.progress .progress-bar {
+	width: 100%;
+	height: 100%;
+	background: none;
+	border-width: 0.7rem;
+	border-style: solid;
+	position: absolute;
+	top: 0;
+	border-color: #06afef;
+}
+
+.progress_info>.progress .progress-left .progress-bar {
+	left: 100%;
+	border-top-right-radius: 11.5rem;
+	border-bottom-right-radius: 11.5rem;
+	border-left: 0;
+	-webkit-transform-origin: center left;
+	transform-origin: center left;
+}
+
+.progress_info>.progress .progress-right {
+	right: 0;
+}
+
+.progress_info>.progress .progress-right .progress-bar {
+	left: -100%;
+	border-top-left-radius: 11.5rem;
+	border-bottom-left-radius: 11.5rem;
+	border-right: 0;
+	-webkit-transform-origin: center right;
+	transform-origin: center right;
+}
+
+.progress_info>.progress .progress-value {
+	display: flex;
+	border-radius: 50%;
+	font-size: 3.6rem;
+	text-align: center;
+	line-height: 3.6rem;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	font-weight: 300;
+	transform: rotate(105deg);
+}
+
+.progress_info>.progress .progress-value div {
+	margin-top: 1rem;
+	font-size: 4rem;
+	font-weight: 600;
+	color: #fff;
+	text-align: center;
+}
+
+.progress_info>.progress .progress-value span {
+	text-transform: uppercase;
+	display: block;
+	font-size: 2.6rem;
+}
+
+.progress_info>.progress[data-percentage="10"] .progress-right .progress-bar {
+	animation: loading-1 1.5s linear forwards;
+}
+
+.progress_info>.progress[data-percentage="10"] .progress-left .progress-bar {
+	animation: 0;
+}
+
+.progress_info>.progress[data-percentage="20"] .progress-right .progress-bar {
+	animation: loading-2 1.5s linear forwards;
+}
+
+.progress_info>.progress[data-percentage="20"] .progress-left .progress-bar {
+	animation: 0;
+}
+
+.progress_info>.progress[data-percentage="30"] .progress-right .progress-bar {
+	animation: loading-3 1.5s linear forwards;
+}
+
+.progress_info .progress[data-percentage="30"] .progress-left .progress-bar {
+	animation: 0;
+}
+
+.progress_info>.progress[data-percentage="40"] .progress-right .progress-bar {
+	animation: loading-4 1.5s linear forwards;
+}
+
+.progress_info>.progress[data-percentage="40"] .progress-left .progress-bar {
+	animation: 0;
+}
+
+.progress_info>.progress[data-percentage="50"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.progress_info>.progress[data-percentage="50"] .progress-left .progress-bar {
+	animation: 0;
+}
+
+.progress_info>.progress[data-percentage="60"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.progress_info>.progress[data-percentage="60"] .progress-left .progress-bar {
+	animation: loading-1 1.5s linear forwards 1.5s;
+}
+
+.progress_info>.progress[data-percentage="70"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.progress_info>.progress[data-percentage="70"] .progress-left .progress-bar {
+	animation: loading-2 1.5s linear forwards 1.5s;
+}
+
+.progress_info>.progress[data-percentage="80"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.progress_info>.progress[data-percentage="80"] .progress-left .progress-bar {
+	animation: loading-3 1.5s linear forwards 1.5s;
+}
+
+.progress_info>.progress[data-percentage="90"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.progress_info>.progress[data-percentage="90"] .progress-left .progress-bar {
+	animation: loading-4 1.5s linear forwards 1.5s;
+}
+
+.progress_info>.progress[data-percentage="100"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.progress_info>.progress[data-percentage="100"] .progress-left .progress-bar {
+	animation: loading-5 1.5s linear forwards 1.5s;
+}
+
+@keyframes loading-1 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(36);
+		transform: rotate(36deg);
+	}
+}
+
+@keyframes loading-2 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(72);
+		transform: rotate(72deg);
+	}
+}
+
+@keyframes loading-3 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(108);
+		transform: rotate(108deg);
+	}
+}
+
+@keyframes loading-4 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(144);
+		transform: rotate(144deg);
+	}
+}
+
+@keyframes loading-5 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(180);
+		transform: rotate(180deg);
+	}
+}
+
+
+/*progressbar end*/
+
+.pool_prize_oopsbox {
+	overflow: hidden;
+	width: 100%;
+	padding: 0rem 0rem 0rem 0rem;
+	margin: 1rem 0rem 1rem 0rem;
+}
+
+.pool_prize_oopsbox p {
+	color: #fff;
+	text-align: center;
+	line-height: 2.4rem;
+}
+
+.pool_prize_oopsbox p span {
+	color: #f0c823;
+	display: block;
+}
+
+.pool_quize_btntext {
+	font-size: 1.8rem;
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+    line-height: 2.8rem;
+    padding: 12px 0 0;
+}
+
+.pool_quize_btntext span {
+	color: #fffa16;
+    font-size: 5rem;
+    display: block;
+    font-weight: 600;
+    margin-bottom: 2rem;
+	    line-height: 6rem;
+}
+
+.pool_prize_price.pool_winner h6 {
+	background: #fdda00;
+	color: #000;
+}
+
+.pool_winner_info .progress_info .progress .progress-bar {
+	border-color: #ffc50a;
+}
+
+.pool_quiztitle p {
+	    color: #f8c415;
+    margin: 1.0rem 0rem 1rem 0rem;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.pool_winner_info .pool_quize_btntext p {
+	color: #f0c823;
+    display: block;
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.pool_quize_btntext.pool_winner2_price span {
+	color: #fff;
+}
+
+.pool_term_tex {
+	list-style-type: lower-alpha;
+	margin: 3rem 2rem 5rem 2rem;
+	padding: 0;
+	display: block;
+	text-align: left;
+}
+
+.pool_term_tex ol {
+	margin: 0;
+	padding: 0;
+}
+
+.pool_term_tex ol li {
+	color: #e4e4e4;
+	margin-bottom: 2rem;
+	font-weight: 300;
+}
+
+.pool_term_tex ul li {
+	border-bottom: 0.1rem solid #f3933c;
+	margin-bottom: 0rem;
+	padding: 1rem;
+	background: #49506a;
+	margin-top: 0.5rem;
+	list-style: none;
+}
+
+.poolpast_winner {
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	display: block;
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.pool_term_tex .poolpast_winnerimg {
+	margin: 0rem 2rem 0rem 0rem;
+	float: left;
+	border: 0.2rem solid #e08532;
+	background: #f3933c;
+	width: 7rem;
+	height: 7rem;
+	border-radius: 50%;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.poolpast_winnerimg img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.poolpast_winnertext {
+	color: #dac54a;
+	font-size: 1.6rem;
+	font-weight: 600;
+	margin: 0rem 0rem 0rem 0.5rem;
+	display: inline-block;
+	position: relative;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	float: left;
+	bottom: -0.6rem;
+	width: 80%;
+}
+
+.poolpast_winnertext span {
+	color: #fff;
+	font-size: 1.5rem;
+	display: block;
+	font-weight: 400;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.poolpast_winnertext p {
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: 400;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.pool_term_tex.pool_tipstext ol {
+	list-style-type: lower-alpha;
+}
+
+.pool_term_tex.pool_tipstext ol li {
+	background: #414855;
+	padding: 1rem;
+}
+.play-text-b{
+	text-transform: uppercase;
+    text-align: center !important;
+	    margin: 2.0rem auto!important;
+}
+
+/*pool prize oops css end*/
+
+
+
+
+/*--------------------------------------------------*/
+
+.new-tandc {
+	color: #fff;
+    padding-top: 20px;
+	    color: #fff;
+    font-weight: 100;
+}
+.new-tandc h4 {
+	text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+}
+.new-tandc p {
+	    line-height: 22px;
+    font-size: 1.6rem;
+}
+.term_tex li ul {
+	margin: 10px 0px 0 12px;
+}
+.term_tex li ul li {
+	list-style-type: Upper-alpha;
+}
+
+.term_tex li ul li ul li {
+	list-style-type: lower-alpha;
+}
+
+.term_tex li table {
+	    border: 1px solid #fff;
+    margin: 8px 0;
+    font-size: 12px;
+    width: 100%;
+
+}
+.term_tex li table td {
+	border: 1px solid #fff;
+    margin: 8px 0;
+    padding: 8px;
+}
+
+.term_tex li {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    padding: 0rem 0rem 2rem 0rem;
+    color: #fff;
+    margin: 0;
+    font-weight: normal;
+}
+th {
+    text-align: left;
+    padding-left: 8px;
+    background-color: #656565;
+}
+/*--------------------------------------------------*/
+
+
+
+/*--------------------------------*/
+
+.logo-hunter {
+	width: 40px;
+	border-radius: 50%;
+}
+
+h4.pool_quiztitle {
+	color: #fffa10;
+	font-size: 2.4rem;
+	font-weight: normal;
+	margin: 0.6rem 0rem 0rem 0rem;
+}
+.time-n-text p{
+	text-align: center;
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    padding: 20px 0;
+}
+.new-block-clr {
+	background: #424652;
+    padding-bottom: 1px;
+}
+
+.pool_winner2_price label {
+	    font-size: 2.5rem;
+}
+
+
+.tc_info {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.term_tex {
+  list-style-type: lower-alpha;
+  margin: 3rem 2rem 5rem 2rem;
+  padding: 0;
+  display: block;
+  text-align: left;
+}
+
+.term_tex li {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.term_tex li p {
+ 
+  margin-bottom: 0.3rem;
+}
+
+.term_tex.faq_text {
+  list-style-type: none;
+}
+
+.term_tex.help_text {
+  list-style: none;
+}
+
+.term_tex.past_winnertext {
+  list-style: none;
+}
+
+.past_winnertext li {
+  border-bottom: 0.1rem solid #f3933c;
+  margin-bottom: 0rem;
+  padding: 1rem;
+  background: #fff;
+  margin-top: 0.5rem;
+}
+
+.past_winnertext li .past_winner {
+  margin-top: 0rem;
+}
+.m-b-20{
+  margin-bottom: 1.3rem !important;	
+}
+
+/*--------------------------------*/
+
+
+/*responsiv css start*/
+
+@media (max-width: 767px) {
+	.poolpast_winnertext {
+		width: 77%;
+	}
+}
+
+@media (max-width: 480px) {
+	html {
+		font-size: 8px;
+	}
+	.poolpast_winnertext {
+		width: 60%;
+	}
+}
+
+@media (max-width: 375px) {
+	.pool_prize_title h5 {
+		font-size: 1.4rem;
+	}
+}
+
+
+/*responsiv css end*/
+
+
+
+/*-------------iphone 7 plus----------------*/
+@media only screen 
+and (min-device-height : 730px) 
+and (max-device-height : 736px) { 
+
+}

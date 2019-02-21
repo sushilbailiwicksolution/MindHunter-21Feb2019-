@@ -1,0 +1,180 @@
+<div class="bg-m">
+  <div class="container-fluid">
+    <div class="row m-header">
+      <div class="col-xs-12 padd0">
+        <!-- <div class="col-xs-2 padd0">
+          <img width="35px" src="assets/megashark/image/menu.png">
+        </div> -->
+        <div class="col-xs-12 m-b-head padd0">
+          <h4>BUMPER QUIZ</h4>
+        </div>
+        <!-- <div class="col-xs-2"></div> -->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="col-xs-12 padd0 two-tabs">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" [ngClass]="{'active': normalTab}"><a href="#" aria-controls="home" role="tab" data-toggle="tab">NORMAL
+                MODE</a></li>
+            <li role="presentation" [ngClass]="{'active': boosterTab}"><a href="#" aria-controls="profile" role="tab" data-toggle="tab">BOSTER
+                MODE</a></li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane "[ngClass]="{'active': normalTab}" id="normalmode">
+              <div class="col-xs-12 buy-text">
+                <h4>Lorem Ipsum is simply dummy text of the printing</h4>
+                <p>Lorem Ipsum is simply dummy and typesetting industry. Lorem Ipsum <span> NORMAL MODE </span> has
+                  been the industry's standard dummy text ever since the 1500s.</p>
+                <h5>Lorem Ipsum is simply dummy</h5>
+              </div>
+              <div class="col-xs-12 question-99" (click)="normalmode()">
+                <div class="col-xs-12 padd0 q-tabs bg-orange">
+                  <div class="col-xs-6  padd0">
+                    <p class="left-text">{{totalQues}} Question</p>
+                  </div>
+                  <div *ngIf="this.starter_isResume" class="col-xs-3 padd0">
+                    <p class="left-text"> Resume </p>
+                  </div>
+                  <div *ngIf="!this.starter_isResume" class="col-xs-3 padd0">
+                    <p class="left-text">  </p>
+                  </div>
+                  <div class="col-xs-3 padd0" *ngIf="s_denominationType != 'Points'">
+                    <p class="right-text">Rs. {{entryFee}}</p>
+                  </div>
+                  <div class="col-xs-3 padd0" *ngIf="s_denominationType == 'Points'">
+                    <p class="right-text">{{entryFee}} Points</p>
+                  </div>
+                </div>
+                <p>Starter pack</p>
+              </div>
+
+
+              <div class="col-xs-12 padd0 q-5tab" *ngFor="let pack of normal_packList"  (click)="selectedPack(pack)">
+                <div class="col-xs-12 padd0 q-tabs " *ngIf="pack.packType == '1'">
+                  <div class="col-xs-6  padd0">
+                    <p class="left-text">{{pack.totalQ}} Question</p>
+                  </div>
+                  <div *ngIf="!pack.isRemainQues" class="col-xs-3 padd0">
+                    <p class="left-text"></p>
+                  </div>
+                  <div *ngIf="pack.isRemainQues" class="col-xs-3 padd0">
+                    <p class="left-text"> Resume </p>
+                  </div>
+                  <div class="col-xs-3 padd0" *ngIf="pack.denomination_type != 'Points'">
+                    <p class="right-text">Rs. {{pack.entryFee}}</p>
+                  </div>
+                  <div class="col-xs-3 padd0" *ngIf="pack.denomination_type == 'Points'">
+                    <p class="right-text">{{pack.entryFee}} Points</p>
+                  </div>
+                </div>
+              </div>
+             
+
+            </div>
+            <div role="tabpanel" class="tab-pane" [ngClass]="{'active': boosterTab}" id="bostermode">
+              <div class="col-xs-12 buy-text">
+                <h4>Lorem Ipsum is simply dummy text of the printing</h4>
+                <p>Lorem Ipsum is simply dummy and typesetting industry. Lorem Ipsum <span> BOOSTER MODE </span> has
+                  been the industry's standard dummy text ever since the 1500s.</p>
+                <h5>Lorem Ipsum is simply dummy</h5>
+              </div>
+              <div class="col-xs-12 question-99" (click)="normalmode()">
+                <div class="col-xs-12 padd0 q-tabs bg-orange">
+                  <div class="col-xs-6  padd0">
+                    <p class="left-text">{{totalQues}} Question</p>
+                  </div>
+                  <div *ngIf="this.starter_isResume" class="col-xs-3 padd0">
+                    <p class="left-text"> Resume </p>
+                  </div>
+                  <div *ngIf="!this.starter_isResume" class="col-xs-3 padd0">
+                    <p class="left-text">  </p>
+                  </div>
+                  <div class="col-xs-3 padd0" *ngIf="s_denominationType != 'Points'">
+                    <p class="right-text">Rs. {{entryFee}}</p>
+                  </div>
+                  <div class="col-xs-3 padd0" *ngIf="s_denominationType == 'Points'">
+                    <p class="right-text">{{entryFee}} Points</p>
+                  </div>
+                </div>
+                <p>Starter pack</p>
+              </div>
+
+
+              <div class="col-xs-12 padd0 q-5tab" *ngFor="let pack of normal_packList"  (click)="selectedPack(pack)">
+                <div class="col-xs-12 padd0 q-tabs " *ngIf="pack.packType == '2'">
+                  <div class="col-xs-6  padd0">
+                    <p class="left-text">{{pack.totalQ}} Question</p>
+                  </div>
+                  <div *ngIf="!pack.isRemainQues" class="col-xs-3 padd0">
+                    <p class="left-text"></p>
+                  </div>
+                  <div *ngIf="pack.isRemainQues" class="col-xs-3 padd0">
+                    <p class="left-text"> Resume </p>
+                  </div>
+                  
+                  <div class="col-xs-3 padd0" *ngIf="pack.denomination_type != 'Points'">
+                    <p class="right-text">Rs. {{pack.entryFee}}</p>
+                  </div>
+                  <div class="col-xs-3 padd0" *ngIf="pack.denomination_type == 'Points'">
+                    <p class="right-text">{{pack.entryFee}} Points</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="col-xs-12 bumper-text">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid home-footer">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="col-xs-12 m-foot-quest">
+          <div class="col-xs-4 footer-text-quest">
+            <p>T&C</p>
+          </div>
+          <div class="col-xs-4 footer-text-quest">
+            <p><a (click)="pastWinners()">PAST WINNER</a></p>
+          </div>
+          <div class="col-xs-4 footer-text-quest">
+            <p>FAQ'S</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</div>

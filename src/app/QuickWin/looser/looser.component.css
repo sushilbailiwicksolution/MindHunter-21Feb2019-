@@ -1,0 +1,118 @@
+html {  font-size: 10px;   }
+body { 
+     font-family: Roboto;
+      font-size: 1.6rem;
+        font-weight: 400;
+          line-height: 1.8rem;
+            color: #f00;
+              padding: 0; 
+               margin: 0;
+                 background: #faaf16; 
+                  }
+                  .p_0 {  padding: 0rem;}
+                  .bg_white {  background: #fff;}
+                  .home_screen {  width: 100%;  height: 95vh;  background: #faaf16;      overflow: scroll;}
+                  .quick_screen {  width: 100%;  background: #faaf16;  height:auto;  height:100vh;}
+                  .header {  width: 100%;  min-height: 4rem;  background: #f3933c;  top: 0;  z-index: 9999;}
+                  .logo {  display: inline-block;  position: absolute;  top: 1rem;  left: 0;}
+                  .logo-area{  height: 55px;}
+                  .logo-area img{		}
+                  .header_title {  display: inline-block;  color: #fff;  line-height: 6.2rem;  margin: 0 auto;  text-align: center;  width: 100%;  font-size: 2.6rem;}
+                  .header_belowtext {  color: #000;  font-size: 1.8rem;  padding: 2rem 0rem;  text-align: center;  margin: 0rem;  font-weight: bold;}
+                  .banner_img {  width: 100%;  height: 16.5rem;  overflow: hidden;}
+                  .banner_img img {  width: 100%;  height: 100%;  object-fit: cover;  object-position: center;}
+                  .banner_belowtext {  text-align: center;  padding: 2rem 0rem;  color: #000;  font-size: 2.2rem;  margin: 0; }
+                  .quickwin_info {    padding: 1rem 0rem;}
+                  .movie_list {      background: #fff;    overflow: hidden;    padding: 1.8rem 0rem;    border-radius: 5rem;    margin: 1.2rem 0;}
+                  .movie_list span {  text-align: center;  background: #ebebeb;  border-radius: 50%;  width: 3.5rem;  height: 3.5rem;  display: block;  margin: 0 auto;  color: #000;  font-size: 1.4rem;      line-height: 3.5rem;}
+                  .movie_list p {      color: #000;    margin: 0;    line-height: 3.2rem;    font-size: 2.2rem;	text-align:center;}
+                  .quickwin_img {  width: auto;  margin: 0 auto;  display: block;  text-align: center;  margin-top: 1.5rem;}
+                  .quickwin_img img {  max-width: 100%;  height: 15rem;}
+                  .mob_img {  width: auto;  margin: 0 auto;  display: block;  text-align: center;  margin-top: 1rem;}
+                  .mob_img img {  max-width: 100%;}
+                  .past_winner {  width: 100%;  margin: 0 auto;  overflow: hidden;  display: block;  text-align: center;  margin-top: 3rem;}
+                  .past_winnerimg {  width: 7rem;  height: 7rem;  border-radius: 50%;  overflow: hidden;  border: 0.3rem solid #fff;  margin: 0rem 0.5rem 0rem 0rem;  display: inline-block;}
+                  .past_winnerimg img {  width: 100%;  height: 100%;  object-fit: cover;}
+                  .past_winnertext {  color: #313969;  font-size: 1.6rem;  font-weight: 600;  margin: 0rem 0rem 0rem 0.5rem;  display: inline-block;  position: relative;  text-align: left;  white-space: nowrap;  overflow: hidden;  text-overflow: ellipsis;}
+                  .past_winnertext span {  color: #444;  font-size: 1.5rem;  display: block;  font-weight: 400;  white-space: nowrap;  overflow: hidden;  text-overflow: ellipsis;}
+                  .past_winnertext p {  color: #444;  font-size: 1.4rem;  font-weight: 400;  white-space: nowrap;  overflow: hidden;  text-overflow: ellipsis;}
+                  .btn.play_btn {  background: #50ad2a;  color: #fff;  font-size: 2rem;  font-weight: 600;  text-transform: uppercase;  display: block;  text-align: center;  margin: 0 auto;  padding: 1.5rem 4rem;  margin-top: 2rem;  margin-bottom: 2rem;  border-radius: 3rem;  /*box-shadow: 0rem 1rem 0rem -0.3rem #378915;*/  border: 0.1rem solid #f3933c;  outline: none !important;  transition: 0.3s;}
+                  .btn.play_btn:hover {  background-color: #3e8e41;}
+                  .btn.play_btn:active {  background-color: #3e8e41;  box-shadow: 0rem 0.5rem #666;  transform: translateY(5px);}
+                  .footer_sec {       background: #000;    padding: 1.5rem 0rem;        position: fixed;    bottom: 0px;    z-index: 9;    width: 100%;    margin-top: 6.9rem;}
+                  .footer_nav {  padding: 0;  margin: 0;  text-align: center;}
+                  .footer_nav li {  display: inline-block;  list-style: none;}
+                  .footer_nav li a {  color: #fff;  padding: 0rem 1.3rem;  border-right: 0.2rem solid #fff;  text-decoration: none !important;}
+                  .footer_nav li:first-child a {  padding-left: 0;}
+                  .footer_nav li:last-child a {  padding-right: 0;  border-right: 0rem;}/*term condition css*/
+                  .header.tc_header {  background: #e08532;}
+                  .tc_info {  width: 100%;  margin-top: 3rem;}
+                  .term_tex {  list-style-type: lower-alpha;  margin: 3rem 2rem 5rem 2rem;  padding: 0;  display: block;  text-align: left;}
+                  .term_tex li {  color: #000;  margin-bottom: 2rem;}
+                  .term_tex li p {    margin-bottom: 0.3rem;}
+                  .term_tex.faq_text {  list-style-type: none;}
+                  .term_tex.help_text {  list-style: none;}
+                  .term_tex.past_winnertext {  list-style: none;}
+                  .past_winnertext li {  border-bottom: 0.1rem solid #f3933c;  margin-bottom: 0rem;  padding: 1rem;  background: #fff;  margin-top: 0.5rem;}
+                  .past_winnertext li .past_winner {  margin-top: 0rem;}
+                  .past_winnertext .past_winnerimg {  margin: 0rem 2rem 0rem 0rem;  float: left;  border: 0.2rem solid #e08532;  background: #f3933c;}
+                  .past_winnertext .past_winnertext {  float: left;  bottom: -0.6rem;  text-align: left;  width: 85%;}
+                  .banner-area-snap {      width: 100%;    background-image: url(src/assets/quickwin/image/Quick-Win-2.png);    height: 62vh;    background-repeat: no-repeat;   background-size: 100% 100%;}
+                  .banner-area-snap img {  width: 100%;}
+                  .home_info{	    width: 100%;    float: left;}
+                  .number-aa{	position:absolute;}
+                  .answer-text{	padding:0px;}
+                  .answer-text p{	font-size: 2.0rem;    text-align: center;    color: #fff;    line-height: 2.2rem;    font-weight: bold;}
+                  .answer-text p span{	font-size: 2.0rem;    text-align: center;    color: #fff;    line-height: 2.2rem;    font-weight: bold;	display:block;}
+                  .answer-text h3{	    font-size: 3.2rem;    font-weight: bold;    color: #fff;    line-height: 2.0rem;	    text-align: center;		    margin: 0px;}
+                  .answer-text h3 img{	margin-right:10px;}
+                  .answer-text-2{	padding:0px;	    margin-top: 2.8rem;}
+                  .answer-text-2 p{	font-size: 1.6rem;    text-align: center;    color: #fff;    line-height: 2.2rem;	margin-bottom:5px;}
+                  .answer-text-2 button{	font-size: 2.0rem;    text-align: center;    color: #ff6700;    text-transform: uppercase;    padding: 5px 28px;    border-radius: 20px;    height: 36px;    background-color: #fff;    border: 0px;    margin: auto;    display: block;}
+                  .won-pp-text{	    padding: 2.2rem 0rem 0rem 0rem;}
+                  .won-pp-text p{	font-size: 3.0rem;    font-weight: bold;    color: #fff;    line-height: 3.0rem;	text-align: center;	margin: 0px;}
+                  .won-pp-text h3{	    font-size: 4.2rem;    font-weight: bold;    color: #fff;    line-height: 3.0rem;    text-align: center;    margin-bottom: 8px;}
+                  .won-pp-text-2{	    padding: 2.2rem 0rem 0rem 0rem;}
+                  .won-pp-text-2 p{	font-size: 2.2rem;    font-weight: bold;    color: #fff;    line-height: 3.0rem;	text-align: center;	margin: 0px;}
+                  .won-pp-text-2 h3{	    font-size: 3.5rem;    font-weight: bold;    color: #fff;    line-height: 3.0rem;    text-align: center;    margin-bottom: 8px;	margin-top: 5px;}
+                  .won-pp-text-2 h3 img{	margin-right:10px;}
+                  .won-pp-text-3{	    padding: 2.2rem 0rem 3rem 0rem;}
+                  .won-pp-text-3 p{	    font-size: 2.5rem;    font-weight: bold;    color: #fff;    line-height: 3.0rem;	text-align: center;	margin: 0px;}
+                  .won-pp-text-4{	    padding: 2.2rem 0rem 0rem 0rem;}
+                  .won-pp-text-4 p{	    font-size: 2.5rem;    font-weight: bold;    color: #fff;    line-height: 3.0rem;	text-align: center;	margin: 0px;}
+                  .logo-tt{  width: 56px;}
+                  .logo-hunter{	    width: 40px;    border-radius: 50%;}
+                  .logo-hunter-2{	width: 80px;	margin-top:2px;}/*--------------------------------*/
+                  .new-tandc{	color:#000;}.new-tandc {	color: #000;    padding-top: 20px;    font-weight: 100;}
+                  .new-tandc h4 {	text-align: center;    padding: 10px 0;    font-size: 18px;}
+                  .new-tandc p {	    line-height: 22px;    font-size: 1.6rem;}
+                  .term_tex li ul {	margin: 10px 0px 0 12px;	color: #000;	    padding-left: 0px;}
+                  .term_tex li ul li {	list-style-type: Upper-alpha;	color: #000;}
+                  .term_tex li ul li ul li {	list-style-type: lower-alpha;	color: #000;}
+                  .term_tex li table {	    border: 1px solid #000;    margin: 8px 0;    font-size: 12px;    width: 100%;}
+                  .term_tex li table td {	border: 1px solid #000;	margin: 8px 0;	padding: 8px;}
+                  .term_tex li {    font-size: 1.6rem;    line-height: 2.4rem;    padding: 0rem 0rem 2rem 0rem;    color: #000;    margin: 0;    font-weight: normal;}
+                  th {    text-align: left;    padding-left: 8px;    background-color: #656565;}
+                  /*--------------------------------*//*responsive css start*/
+                  @media(max-width: 767px) {
+                        html {    font-size: 9px;  }  
+                  .past_winnertext .past_winnertext {  
+                        width: 77%;  }}
+                  @media(max-width: 480px) {
+                      	html{	
+                                  font-size:10.5px;	
+                            }	
+                            .header_belowtext {  
+                                  color: #000;    font-size: 1.6rem;    padding: 2rem 0rem;    text-align: center;    margin: 0rem;    font-weight: bold;}	
+                                      .banner-area-snap {    width: 100%;    background-image: url(src/assets/quickwin/image/Quick-Win-2.png);    height: 60vh;    background-repeat: no-repeat;    background-size: 100% 100%;}  
+                                      .quickwin_img img {    max-width: 100%;    height: 9rem;  }  
+                                      .mob_img img {    max-width: 100%;    height: 24rem;  }  
+                                      .past_winnertext .past_winnertext {    width: 60%;  }}
+                                      
+                                      @media(max-width: 375px) {
+                                          	html{		
+                                                  font-size:8px;	
+                                                }		
+                                                .banner-area-snap { 
+                                                       width: 100%;    background-image: url(src/assets/quickwin/image/Quick-Win-2.png);    height: 55vh;    background-repeat: no-repeat;    background-size: 100% 100%;}		}
+                                                       /*responsive css end*/

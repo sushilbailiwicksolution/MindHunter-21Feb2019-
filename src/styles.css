@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+
+@media (max-width:480px) {
+    html{
+        font-size: 8px !important;
+    }	
+    .how_playbtn:before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+        background: linear-gradient(to bottom right, #3aa204 50%, #288203 50%);
+        top: 0.9rem;
+        left: -2.1rem;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+    .how_playbtn:after{
+            content: "";
+        display: block;
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+        background: linear-gradient(to bottom right, #3aa204 50%, #288203 50%);
+        top: 0.8rem;
+        right: -2.1rem;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+    .number-box-2 {
+    background: #2f2f2f;
+    border-radius: 8px;
+    height: 20px;
+    width: 160%;
+    display: block;
+    left: -15px;
+    position: absolute;
+    bottom: -22px;
+}
+    
+}
+
+

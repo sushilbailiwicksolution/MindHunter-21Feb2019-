@@ -1,0 +1,64 @@
+<body id="pp_ques">
+<div class="pool_home_screen">		
+  <div class="container">
+    <div class="pool_home_info">	
+      <div class="col-xs-12 p_0">
+        <div class="pool_header">
+          <!-- <a href="javascript:void(0);" class="menu_icon">							<img src="assets/poolprize/image/menu.png"> -->
+          <!-- </a> -->
+          <div class="col-xs-2 p_0">
+            <a class="logo">
+              <img class="logo-hunter" src="assets/poolprize/image/pool_logo.jpg" (click)="backToHome()">
+            </a>
+          </div>
+          <div class="col-xs-8 p_0">
+          <h3 class="pool_quiztitle">Pool Prize</h3>
+          </div>
+          <div class="col-xs-2 p_0"></div>
+        </div>
+        <div class="pool_quiz_scorebord">
+          <div class="pool_prize_title">
+            <div class="col-xs-4 p_0"><h5>Questions Left</h5></div>
+            <div class="col-xs-4 p_0"><h5>Questions Played</h5></div>
+            <div class="col-xs-4 p_0"><h5>Your Score</h5></div>
+          </div>
+          <div class="pool_prize_price">
+            <div class="col-xs-4 p_0"><h6>{{questionleft}}</h6></div>
+            <div class="col-xs-4 p_0"><h6>{{questionplayed}}</h6></div>
+            <div class="col-xs-4 p_0"><h6>{{correctAnswer}}/{{totalquestion}}</h6></div>
+          </div>
+        </div>
+
+      </div>	
+    </div>
+  </div>
+  <div class="pool_quiz_info">
+    <div class="container">
+      <div class="col-xs-12 p_0">
+        <div class="pool_quizimg">
+          <img [src]="qImage">
+        </div>
+        <div class="pool_quiztext">
+            {{question}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <ngx-spinner
+  bdColor="rgba(51,51,51,0.3)"
+  size="medium"
+  color="#FF9800"
+  type="timer">
+ <p style="font-size: 20px; color: #FF9800"></p>
+</ngx-spinner>   
+  <div class="container">
+    <div class="col-xs-12 p_0">
+      <div class="pool_quizbtnbox">
+        <button class="btn pool_quizbtn"  *ngFor = "let ans of answers; let i = index" id = "{{i}}"  (click)="answer(ans,i)">{{ans}}</button>
+       
+      </div>
+    </div>
+  </div>
+     
+</div>
+</body>

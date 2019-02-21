@@ -1,0 +1,136 @@
+  
+<body id="cb_looser">
+	<div class="home_screen mega_winscreen">
+      <div class="container">
+        <div class="col-xs-12">
+          <div class=" mega_wininfo">
+            <div class="user_img">
+              <img src="assets/cashblast/image/avtar_img.jpg" (click)="getHome()">
+              
+            </div>
+  
+            <div class="blast_img">
+              <h1>OOPS! <span>You Lost</span></h1>
+            </div>
+            
+            
+  
+            
+  
+            <div class="replay_btnbox-22">
+            <div class="replay-center">
+              <a class=" replay_btn-22" (click)="getReplay()">
+                  
+                <h5>Replay
+                  <span *ngIf="denomination_type === 'Points'">{{entryFee}} {{denomination_type}}</span>
+                  <span *ngIf="denomination_type !== 'Points'">{{denomination_type}} {{entryFee}} </span></h5>
+                <h6><span class="replay_img"><img src="assets/cashblast/image/icon_10.png"></span></h6>
+              </a>
+            </div>
+            </div>
+  
+            <h3 class="sec_title_text">Game Result</h3>
+            <div class="result_box">
+              <h5>Players <span></span></h5>
+              <div class="rank_info org_color" *ngFor="let looser of looserData; let i=index;">
+                <!-- <div class="col-xs-3">{{i+1}}</div> -->
+                <div class="col-xs-12 org_color">{{getMobileNumberMask(looser.mobileNo)}}</div>
+                <!-- <div class="col-xs-3">Winner</div> -->
+                <!-- <div class="col-xs-2 rank_text  org_color"></div>  -->
+              </div>
+              <!-- <div class="rank_info">
+                <div class="col-xs-1">02</div>
+                <div class="col-xs-6">82xxxxxx52</div>
+                <div class="col-xs-3"></div>
+                <div class="col-xs-2 rank_text">10</div>
+              </div>
+              <div class="rank_info">
+                <div class="col-xs-1">03</div>
+                <div class="col-xs-6">82xxxxxx52</div>
+                <div class="col-xs-3"></div>
+                <div class="col-xs-2 rank_text">5</div>
+              </div>
+              <div class="rank_info">
+                <div class="col-xs-1">04</div>
+                <div class="col-xs-6">82xxxxxx52</div>
+                <div class="col-xs-3"></div>
+                <div class="col-xs-2 rank_text">0</div>
+              </div> -->
+            </div>
+
+            <div class="playmore_btnbox">
+              <button class="btn btn-default play_morebtn" (click)="getHome()">
+               Play More Games
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>	
+  </body>
+
+
+
+
+
+
+
+<!-- 10/1/19<div class="home_screen">
+  <div class="container">
+    <div class="col-xs-12">
+      <div class=" lost_info">
+        <div class="user_img" (click)="getHome()" style="cursor: pointer;">
+          <img src="assets/cashblast/image/home_icon.png">
+        </div>
+        <div class="lost_title">
+          OOPS!
+          <span>You Lost</span>
+        </div>
+        <div class="replay_btnbox">
+          <a href="javascript:void(0);" class=" replay_btn">
+            <h5 (click)="getReplay();" style="cursor: pointer;"><span><img src="assets/cashblast/image/icon_10.png"></span>Replay</h5>
+            <h6>₹20</h6>
+          </a>
+        </div>
+        <h3 class="sec_title_text">GAME RESULT</h3>
+        <div class="result_box">
+          <h5>PLAYERS 
+            <span>RANK</span>
+          </h5>   
+               
+          <div class="rank_info org_color" *ngFor="let looser of looserData; let i=index;">
+            <div class="col-xs-1">{{i+1}}</div>
+            <div class="col-xs-5">{{looser.mobileNo}}</div>
+            <div class="col-xs-2"><span class="heart_icon"><img src="assets/cashblast/image/heart_icon.png"></span>{{looser.life}}</div>
+            <div class="col-xs-2">
+
+
+              <!-- {{looser.mobileNo==currentUser ? 'Looser':''}} -->
+            <!-- Yash</div> -->
+            <!-- <div class="col-xs-2 rank_text">01</div> -->
+          <!-- YAsh</div> -->
+
+<!-- ----------------------- -->
+
+
+
+          <!-- <div class="rank_info">
+            <div class="col-xs-1">02</div>
+            <div class="col-xs-5">82xxxxxx52</div>
+            <div class="col-xs-2"><span class="heart_icon"><img src="assets/cashblast/image/heart_icon.png"></span>03</div>
+            <div class="col-xs-2">Out</div>
+            <div class="col-xs-2 rank_text">01</div>
+          </div>
+          <div class="rank_info">
+            <div class="col-xs-1">03</div>
+            <div class="col-xs-5">82xxxxxx52</div>
+            <div class="col-xs-2"><span class="heart_icon"><img src="assets/cashblast/image/heart_icon.png"></span>03</div>
+            <div class="col-xs-2"></div>
+            <div class="col-xs-2 rank_text">01</div>
+          </div> -->
+        <!--Yash </div>
+      </div>
+    </div>
+  </div>
+</div> -->

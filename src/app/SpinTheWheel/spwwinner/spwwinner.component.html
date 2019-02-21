@@ -1,0 +1,58 @@
+<div class="spin_body">
+  <!-- <iframe src="sound/song1.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+  </iframe>  -->
+  <div class="spin_home_screen">
+      <div class="spin_header">
+          <div class="container">
+              <div class="col-xs-12 p_0">
+                  <a href="javascript:void(0);">
+                      <img src="assets/spinthewheel/image/spin_logo.png">
+                  </a>
+                  <h4>Spin the Wheel</h4>
+                  <p>India's most Trusted Cash skill-games site</p>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+          <div class="spin_home_info">    
+              <div class="col-xs-12 p_0">
+              <!-- spin-wheel start -->
+              <div class="spin_winimg">
+                  <img src="assets/spinthewheel/image/spin-wheel-win2.png">
+              </div>
+              <!-- spin-wheel end -->
+              <span *ngIf="winnerData.price !=0">
+              <div class="spin_belowtext">Wow..!! You won Rs. <b>{{winnerData.price}}</b>  <p>
+                  Enter Your Mobile Number to claim your free Gift
+              </p></div>
+              <form  [formGroup]="claimForm" (ngSubmit)="getClaim()" class="support_form">
+              <div class="form-group paytm_wform">
+                <input id="mobileNo" type="text" class="form-control" formControlName="mobileNo" name="mobileNo" 
+                inputmode="numeric" pattern="^[6-9][0-9]{9}$" digitOnly minlength="10" maxlength="10"   placeholder="Enter your mobile number">
+                  <p>*Enter You Valid 10 Digit Mobile Number</p>
+              </div>
+              <button class="btn win_claimbtn">CLAIM </button>
+            </form>  
+            </span>
+            <div class="spin_belowtext" *ngIf = "winnerData.price ==0">
+                <b>{{winnerData.text}}</b> 
+                <br><button class="btn win_claimbtn" (click) = "getReplay()">Replay </button>
+
+            </div>
+              <div class="winner_btnbtext">Once you enter, you will receive an SMS containing the Link and temporary password for your account to Redeem your Offered winning. </div>
+          
+            </div>  
+          </div>
+      </div>
+      <footer class="spin_footer">
+          <div class="container">
+              <div class="spin_footer_nav">
+                  <ul>
+                      <li><a href="javascript:void(0);">T &amp; C</a></li>
+                  </ul>
+              </div>
+          </div>
+      </footer>
+  </div>
+  
+</div>

@@ -1,0 +1,153 @@
+<body id="pp_home">
+  <div class="pool_home_screen">
+    <div class="container">
+      <div class="pool_home_info">
+
+        <div class="pool_header">
+          <div class="col-xs-2 p_0">
+            <a class="logo">
+              <img class="logo-hunter" src="assets/poolprize/image/pool_logo.jpg" (click)="getHome()">
+            </a>
+          </div>
+          <div class="col-xs-8 p_0">
+            <h3 class="pool_quiztitle text-center">Pool Prize</h3>
+          </div>
+          <div class="col-xs-2 p_0">
+          </div>
+        </div>
+
+        <div class="pool_header">
+          <div class="col-xs-12 p_0">
+            <h4 class="pool_quiztitle text-center">Prize 10,000 Points</h4>
+          </div>
+        </div>
+
+        <div class="col-xs-12 p_0">
+          <div class="clearfix"></div>
+          <div class="pool_banner">
+            <!--div id="myCarousel" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                        <div class="item active">
+                          <img src="image/banner2.jpg" alt="Los Angeles" style="width:100%;">
+                        </div>
+                        <div class="item">
+                          <img src="image/banner1.jpg" alt="Chicago" style="width:100%;">
+                        </div>
+                        <div class="item">
+                          <img src="image/banner3.jpg" alt="New york" style="width:100%;">
+                        </div>
+                      </div>
+                      </div-->
+            <img src="assets/poolprize/image/banner1.jpg" alt="Chicago" style="width:100%;">
+          </div>
+          <div class="pool_prizebox">
+            <!--p>All player with a qualifying score per above will get an equal share of that tier of Pool Prize</p-->
+            <!--button class="btn pool_howply pool_playbtn">How to Play</button-->
+            <div class="pool_prize_title">
+              <div class="col-xs-2 p_0">
+                <h5>Tier</h5>
+              </div>
+              <div class="col-xs-3 p_0">
+                <h5>Score</h5>
+              </div>
+              <div class="col-xs-7 p_0">
+                <h5>Winning Points</h5>
+              </div>
+            </div>
+            <div class="pool_prize_price" *ngFor="let tier of tiers ;let i = index">
+              <div class="col-xs-2 p_0">
+                <h6>{{i+1}}</h6>
+              </div>
+              <div class="col-xs-3 p_0">
+                <h6>{{tier.noOfQuestion}}/20</h6>
+              </div>
+              <div class="col-xs-7 p_0">
+
+                <h6>{{tier.reward | number : "" : ""}}</h6>
+              </div>
+            </div>
+            <!-- <div class="pool_prize_price">
+            <div class="col-xs-2 p_0">
+              <h6>2</h6>
+            </div>
+            <div class="col-xs-3 p_0">
+              <h6>19/20</h6>
+            </div>
+            <div class="col-xs-7 p_0">
+              <h6>3,000</h6>
+            </div>
+          </div>
+          <div class="pool_prize_price">
+            <div class="col-xs-2 p_0">
+              <h6>3</h6>
+            </div>
+            <div class="col-xs-3 p_0">
+              <h6>18/20</h6>
+            </div>
+            <div class="col-xs-7 p_0">
+              <h6>2,000</h6>
+            </div>
+          </div> -->
+            <div class="clearfix"></div>
+            <!--p>You can play multiple limes and your BEST SCORE of the day will be considered.</p-->
+          </div>
+          <div class="time-n-text">
+            <span *ngIf="isPackActive">
+              <div class="pool_timeplay">
+                Time left to Play -
+                <span>{{days}}d: {{hours}}h :{{minutes}}m: {{seconds}}s</span>
+              </div>
+
+              <span *ngFor="let pack of packList">
+                <button class="btn pool_playbtn" *ngIf="!isActivePlayer" (click)="payNow(pack)">
+                  Play Now
+                  <span>{{pack.entryFee}} Points</span>
+                </button>
+              </span>
+             
+              <span *ngFor="let pack of packList">
+                <button class="btn pool_playbtn" *ngIf="isActivePlayer" (click)="payNow(pack)">
+                  Resume
+                </button>
+              </span>
+            </span>
+            <span *ngIf="!isPackActive">
+              <button class="btn pool_playbtn" [disabled]="true">
+                New Pack Coming Soon
+              </button>
+            </span>
+
+            <!-- 
+          <button class="btn pool_playbtn" (click)="playNow()">
+            Play Now
+            <span>₹{{pack.entryFee}} Points</span>
+          </button> -->
+            <p>All players with a qualifying score per above will get an equal share of that tier of Pool Prize</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="pool_footer_sec">
+      <div class="container">
+        <div class="pool_footer_nav">
+          <ul>
+            <li (click)="getTc()">
+              <a>T & C</a>
+            </li>
+            <li (click)="getPastWinner()">
+              <a>Past Winners</a>
+            </li>
+            <li (click)="getFaq()">
+              <a>FAQ's</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>

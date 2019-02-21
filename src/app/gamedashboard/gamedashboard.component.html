@@ -1,0 +1,137 @@
+<div id="dashboard">
+  <div class="home_screen-2 support_screen">
+    <div class="header_title">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-5">
+            <div class="d-logo">
+              <img src="assets/dashboard/image/logo.png">
+            </div>
+          </div>
+          <div class="col-xs-3 p-0">
+            <div class="points-area">
+              <h4>
+                <img src="assets/dashboard/image/coin.png"> 2387 </h4>
+            </div>
+          </div>
+
+          <div class="col-xs-4 p-0 mob-nomber">
+            <p>+91 9650720084</p>
+          </div>
+
+        </div>
+
+
+        <div class="row">
+          <div class="col-xs-12 promo-text">
+            <p>
+              <img src="assets/dashboard/image/speaker.png">Play Snap Win & Win Redmi Note 4</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row" *ngFor = "let game of gamelist;">
+          <div class="col-xs-12 ">
+            <div class="first-banner" (click)="gameSer(game)">
+                <img [src]="game.banner">
+              <!-- <img [src]="assets/dashboard/image/img-1.png"> -->
+              <!--p>SEASON ENDS IN 02d : 09h : 31m : 06s</p-->
+            </div>
+          </div>
+
+          <!-- <div class="col-xs-12 ">
+            <div class="first-banner" (click)="gameSer(6)">
+              <img src="assets/dashboard/image/img-2.png">
+             
+            </div>
+          </div>
+
+          <div class="col-xs-12 ">
+            <div class="first-banner">
+              <img src="assets/dashboard/image/img-3.png" (click)="gameSer(5)">
+           
+            </div>
+          </div>
+
+          <div class="col-xs-12 ">
+            <div class="first-banner">
+              <img src="assets/dashboard/image/img-4.png">
+            
+            </div>
+          </div>
+
+          <div class="col-xs-12 ">
+            <div class="first-banner">
+              <img src="assets/dashboard/image/img-5.png" (click)="gameSer(4)">
+           
+            </div>
+          </div> -->
+          </div>
+          <div class="row">
+          <div class="col-xs-12 ">
+            <div class="first-banner">
+              <img src="assets/dashboard/image/img-6.png" (click)="gameCoupon()">
+            
+            </div>
+          </div>
+          <div class="col-xs-12 ">
+            <div class="first-banner">
+              <img src="assets/dashboard/image/img-7.png" (click)="gameRedeem()">
+             
+            </div>
+          </div>
+          <div class="col-xs-12 ">
+            <div class="first-banner">
+              <img src="assets/dashboard/image/img-8.png">
+              
+            </div>
+          </div>
+
+        </div>
+
+
+        <!--div class="row">
+    <div class="col-xs-12 past-text-d">
+    <h4>PAST WINNERS!</h4>
+    </div>
+    <div class="col-xs-4 past-win-d">
+    <img src="image/pro1.jpg">
+    </div>
+    <div class="col-xs-4 past-win-d">
+    <img src="image/pro2.jpg">
+    </div>
+    <div class="col-xs-4 past-win-d">
+    <img src="image/pro3.jpg">
+    </div>
+    </div-->
+
+
+      </div>
+
+
+      <div class="container m-foot-quest">
+        <div class="col-xs-12 ">
+          <div class="col-xs-3 footer-text-quest" (click)="getTC()">
+            <p>T&amp;C</p>
+          </div>
+          <div class="col-xs-3 footer-text-quest" (click)="getBlog()">
+            <p>Blog</p>
+          </div>
+          <div class="col-xs-3 footer-text-quest" (click)="getFAQ()">
+            <p>FAQ's</p>
+          </div>
+          <div class="col-xs-3 footer-text-quest" (click)="getSupport()">
+            <p>Support</p>
+          </div>
+  
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+</div>

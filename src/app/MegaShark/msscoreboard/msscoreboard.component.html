@@ -1,0 +1,155 @@
+<div class="bg-m">
+	<div class="container-fluid">
+	 <div class="row m-header">
+	   <div class="col-xs-12 padd0">
+	   	<!-- <div class="col-xs-2 padd0">
+	   		<img width="35px" src="assets/megashark/image/menu.png">	
+	   	</div> -->
+	   	<div class="col-xs-12 m-s-head padd0">
+	   		<h4>SCORE CARD</h4>
+	   	</div>
+	   	<!-- <div class="col-xs-2"></div> -->
+	   </div>
+	</div>
+   </div>
+
+
+   <div class="container-fluid">
+	 <div class="row">
+	 	<div class="col-xs-12">
+
+            
+
+            <div class="col-xs-12 padd0">
+            <div  *ngIf="packType == '2'"class="col-xs-6 padd0 ranking-1box">
+                <h4><span></span> BOOSTER MODE</h4>
+                <p>{{score}}</p>
+            </div>
+            <div  *ngIf="packType == '1' || packType == '0'"class="col-xs-6 padd0 ranking-2box">
+                <h4><span></span> NORMAL MODE</h4>
+                <p>{{score}}</p>
+            </div>
+            <div class="col-xs-6 padd0 ranking-3box">
+                <h4><span></span> REQUIRED POINTS</h4>
+                <p>{{requiredPoints}}</p>
+            </div>
+            </div>
+
+           <div class="col-xs-12 today-text padd0">
+              <h4>TODAY'S SCORE : {{todaySore}}</h4>
+            </div> 
+
+
+            <div  *ngIf="packType == '1' ||  packType == '0'"class="col-xs-12 nmode-text">
+                <h4>NORMAL MODE SCORE CARD</h4>
+            </div>
+	 		<div  *ngIf="packType == '1' || packType == '0'" class="col-xs-12 padd0 ">
+                <div class="col-xs-4 nm-m-score padd0">
+                <button>{{attentedQues}}</button>
+                <h4>Attended Question</h4>
+               </div>
+               <div class="col-xs-4 nm-m-score padd0">
+                <button>{{remainQues}}</button>
+                <h4>Balance Question</h4>
+               </div>
+               <div class="col-xs-4 nm-m-score padd0">
+                <button>{{totalQues}}</button>
+                <h4>Total Question</h4>
+               </div>
+               <!-- <div class="col-xs-3 nm-m-score padd0">
+                <button>04</button>
+                <h4>Today' Score </h4>
+               </div> -->
+	 			 
+                 </div>
+             </div>
+             </div>
+             </div>
+
+
+     <div class="container-fluid">
+     <div class="row">
+        <div class="col-xs-12">
+            <div *ngIf="packType == '2'"class="col-xs-12 nmode-text-orange">
+                <h4>BOOSTER MODE SCORE CARD</h4>
+            </div>
+            <div  *ngIf="packType == '2'" class="col-xs-12 padd0 ">
+                <div class="col-xs-4 nm-m-score-orange padd0">
+                <button>{{attentedQues}}</button>
+                <h4>Attended Question</h4>
+               </div>
+               <div class="col-xs-4 nm-m-score-orange padd0">
+                <button>{{remainQues}}</button>
+                <h4>Balance Question</h4>
+               </div>
+               <div class="col-xs-4 nm-m-score-orange padd0">
+                <button>{{totalQues}}</button>
+                <h4>Total Question</h4>
+               </div>
+               <!-- <div class="col-xs-3 nm-m-score-orange padd0">
+                <button>04</button>
+                <h4>Today's Score </h4>
+               </div> -->
+                </div>
+
+                <div class="col-xs-12 padd0 buy-pack ">
+                <a (click)="goForPack('1')">BUY QUESTION PACK</a>
+                </div>
+
+                <div  *ngIf="packType == '2'" class="col-xs-12 padd0 boost-text">
+                    <h4>BOOSTER MODE</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>                
+                </div>
+                <div  *ngIf="packType == '1'" class="col-xs-12 padd0 nmode-text">
+                    <h4>NORMAL MODE</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>                
+                </div>
+
+                <div class="col-xs-12 padd0 boost-text">
+                    <h5>Please check leaderboards to know your rank</h5>
+                </div>
+
+
+                 <div class="col-xs-12 padd0 play-btn">
+                    <button><a (click)="goForPack('1')">PLAY NORMAL MODE</a></button>
+                    <button class="btn-orange"><a (click)="goForPack('2')">PLAY BOOSTER MODE</a></button>
+                </div>
+
+             </div>
+             </div>  
+             </div>        
+
+  <!-- Tab panes -->
+  
+
+
+	
+
+
+
+
+
+	 <div class="container-fluid home-footer">
+	 <div class="row">
+	 	<div class="col-xs-12">
+	 		<div class="col-xs-12 m-foot-quest">
+	 			<div class="col-xs-4 footer-text-quest">
+	 				<p>T&C</p>
+	 			</div>
+	 			<div class="col-xs-4 footer-text-quest">
+	 				<p><a routerLink="megashark/pastwinner">PAST WINNER</a></p>
+	 			</div>
+	 			<div class="col-xs-4 footer-text-quest">
+	 				<p>FAQ'S</p>
+	 			</div>
+	 			
+	 		</div>
+	 	</div>
+	 </div>
+	 </div>
+
+
+
+
+
+</div>

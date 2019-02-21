@@ -1,0 +1,56 @@
+
+  <div class="quick_screen">
+    <header class="header">
+      <div class="container">
+        <div class="col-xs-12 p_0 logo-area"> <a class="logo"><img class="logo-hunter" src="assets/quickwin/image/avtar_img.jpg" (click)="getHome()"></a>
+          <span class="header_title"></span> </div>
+      </div>
+    </header>
+    <div class="bg_white">
+      <!-- <div class="container">
+        <div class="col-xs-12 p_0">
+          <p class="header_belowtext"> Play now and get a chance to Win Redmi Note 4 </p>
+        </div>
+      </div> -->
+    </div>
+ 
+    <div class="banner_img"> <img [src]="qImage"> </div>
+    <div class="bg_white">
+      <div class="container">
+        <div class="col-xs-12 p_0">
+          <p class="banner_belowtext">{{question}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="quickwin_info">
+      <div class="container">
+        <div class="col-xs-12 p_0">
+          <div class="movie_list" *ngFor="let option of quesAnsList; let i=index" (click)="saveAnswer(option,i)">
+            <div class="col-xs-2 p_0 number-aa"> <span>{{i+1}}</span> </div>
+            <div class="col-xs-12 p_0">
+              <p>{{option}}</p>
+            </div>
+          </div>
+          <!-- <div class="movie_list">
+            <div class="col-xs-2 p_0 number-aa"> <span>2</span> </div>
+            <div class="col-xs-12 p_0">
+              <p>Kaho Na Pyar Hai</p>
+            </div>
+          </div>
+          <div class="movie_list">
+            <div class="col-xs-2 p_0 number-aa"> <span>3</span> </div>
+            <div class="col-xs-12 p_0">
+              <p>Race3</p>
+            </div>
+          </div>
+          <div class="movie_list">
+            <div class="col-xs-2 p_0 number-aa"> <span>4</span> </div>
+            <div class="col-xs-12 p_0">
+              <p>Kuchh Kuchh Hota Hai</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+

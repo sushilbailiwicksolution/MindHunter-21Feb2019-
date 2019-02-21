@@ -1,0 +1,177 @@
+<div class="home_screen mega_winscreen">
+		<div class="container">
+			<div class="col-xs-12">
+				<div class=" mega_wininfo">
+					<div class="user_img">
+						<img src="assets/cashblast/image/avtar_img.jpg" (click)="getHome()">
+					</div>
+
+					<div class="blast_img">
+						<h1>Congratulation! <span>You Won</span></h1>
+					</div>
+					
+					<div class="replay_btnbox prize_box">
+						<a href="javascript:void(0);" class=" replay_btn">
+							<h5><span><img src="assets/cashblast/image/icon_9_o.png"></span>Prize</h5>
+							<h6 *ngIf="denomination_type == 'Points'">{{winamt}} {{denomination_type}}</h6>
+							<h6 *ngIf="denomination_type != 'Points'">{{denomination_type}} {{winamt}} </h6>
+						</a>
+					</div>
+
+					<!-- <div class="bonus_box">
+						<h3 class="sec_title_text">Bonus</h3>
+						<div class="bonus_img">
+							<img src="assets/cashblast/image/bonus_img.png">
+							<span>X1</span>
+						</div>
+
+					</div> -->
+
+					<div class="replay_btnbox-22">
+					<div class="replay-center">
+						<a class=" replay_btn-22" (click)="getReplay()">
+							<h5>Replay
+									<span *ngIf="denomination_type === 'Points'">{{entryFee}} {{denomination_type}}</span>
+                  <span *ngIf="denomination_type !== 'Points'">{{denomination_type}} {{entryFee}} </span></h5>
+							<h6><span class="replay_img"><img src="assets/cashblast/image/icon_10.png"></span></h6>
+						</a>
+					</div>
+					</div>
+
+					
+
+					<h3 class="sec_title_text">Game Result</h3>
+					<div class="result_box" *ngIf="winnerFlag">
+						<h5>Players <span>Rank</span></h5>
+						<div class="rank_info org_color" *ngFor="let winner of winnerData; let i=index;">
+						
+							<div class="col-xs-5">{{getMobileNumberMask(winner.mobileNo)}}</div>
+							<div *ngIf="(i == 0)" class="col-xs-3">Winner</div>
+							<div *ngIf="(i != 0)"class="col-xs-3"></div>
+							<div class="col-xs-4 rank_text" *ngIf="(i == 0)">	<span  class="winner_timg"><img src="assets/cashblast/image/icon_9_w.png
+								"></span></div>
+								
+							<div class="col-xs-4 rank_text" *ngIf="(i > 0)">{{winner.rank}}</div>
+						</div>
+						</div>
+						<div class="result_box" *ngIf="!winnerFlag">
+							<h5>Players <span>Rank</span></h5>
+							<div class="rank_info org_color" *ngFor="let winner of winnerData; let i=index;">
+							
+								<div class="col-xs-5">{{getMobileNumberMask(winner.mobileNo)}}</div>
+								<div *ngIf="(i == 0)" class="col-xs-3">Winner</div>
+								<div *ngIf="(i != 0)"class="col-xs-3">Winner</div>
+								<div class="col-xs-4 rank_text" *ngIf="(i == 0)">	<span  class="winner_timg"><img src="assets/cashblast/image/icon_9_w.png
+									"></span></div>
+									
+								<div class="col-xs-4 rank_text" *ngIf="(i > 0)"><span  class="winner_timg"><img src="assets/cashblast/image/icon_9_w.png
+									"></span></div>
+							</div>
+							</div>
+						<!-- <div class="rank_info">
+							<div class="col-xs-1">02</div>
+							<div class="col-xs-6">82xxxxxx52</div>
+							<div class="col-xs-3"></div>
+							<div class="col-xs-2 rank_text">10</div>
+						</div>
+						<div class="rank_info">
+							<div class="col-xs-1">03</div>
+							<div class="col-xs-6">82xxxxxx52</div>
+							<div class="col-xs-3"></div>
+							<div class="col-xs-2 rank_text">5</div>
+						</div>
+						<div class="rank_info">
+							<div class="col-xs-1">04</div>
+							<div class="col-xs-6">82xxxxxx52</div>
+							<div class="col-xs-3"></div>
+							<div class="col-xs-2 rank_text">0</div>
+						</div> -->
+				
+
+
+
+					<div class="playmore_btnbox">
+						<button class="btn btn-default play_morebtn" (click)="getHome()">
+             Play More Games
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+
+
+
+
+
+<!-- yash
+<div class="home_screen mega_winscreen">
+  <div class="container">
+    <div class="col-xs-12">
+      <div class=" mega_wininfo">
+        <div class="user_img" (click)="getHome()" style="cursor: pointer;">
+          <img src="assets/cashblast/image/home_icon.png">
+          <h6>Home</h6>
+        </div>
+        
+        <div class="blast_img">
+          <img src="assets/cashblast/image/mega_win.jpg">
+        </div>
+        
+        <div class="replay_btnbox prize_box">
+          <a href="javascript:void(0);" class=" replay_btn">
+            <h5><span><img src="assets/cashblast/image/icon_9_o.png"></span>Prize</h5>
+            <h6>₹50</h6>
+          </a>
+        </div>
+
+        <div class="bonus_box">
+          <h3 class="sec_title_text">Bonus</h3>
+          <div class="bonus_img">
+            <img src="assets/cashblast/image/bonus_img.png">
+            <span>X1</span>
+          </div>
+
+        </div>
+
+        <div class="replay_btnbox">
+          <a href="javascript:void(0);" class=" replay_btn">
+            <h5 (click)="getReplay();" style="cursor: pointer;"><span><img src="assets/cashblast/image/icon_10.png"></span>Replay</h5>
+            <h6>₹20</h6>
+          </a>
+        </div>
+
+        <h3 class="sec_title_text">Game Result</h3>
+        <div class="result_box">
+          <h5>Players <span>Score</span></h5>
+          <div class="rank_info org_color" *ngFor="let winner of winnerData; let i=index;">
+            <div class="col-xs-1">{{i+1}}</div>
+            <div class="col-xs-6">{{getMobileNumberMask(winner.mobileNo)}}</div>
+            <div class="col-xs-3"></div>
+            <div class="col-xs-2 rank_text">{{winner.score}}</div>
+          </div> -->
+
+          <!-- <div class="rank_info">
+            <div class="col-xs-1">02</div>
+            <div class="col-xs-6">82xxxxxx52</div>
+            <div class="col-xs-3"></div>
+            <div class="col-xs-2 rank_text">10</div>
+          </div>
+          <div class="rank_info">
+            <div class="col-xs-1">03</div>
+            <div class="col-xs-6">82xxxxxx52</div>
+            <div class="col-xs-3"></div>
+            <div class="col-xs-2 rank_text">05</div>
+          </div>
+          <div class="rank_info">
+            <div class="col-xs-1">04</div>
+            <div class="col-xs-6">82xxxxxx52</div>
+            <div class="col-xs-3"></div>
+            <div class="col-xs-2 rank_text">00</div>
+          </div> -->
+<!-- yash        </div>
+      </div>
+    </div>
+  </div>
+</div>	 -->

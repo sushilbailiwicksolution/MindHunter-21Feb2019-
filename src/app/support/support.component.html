@@ -1,0 +1,56 @@
+<div class="home_screen support_screen">
+  <div class="header_title">
+    <div class="container">
+      <div class="col-xs-12">
+        <a (click)="goBack()"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+        <h4>Support</h4>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="col-xs-12">
+      <div class="home_info support_info">
+        <p class="subtitle_text">In case of any query or if you need any further assistance, feel free to get in touch.</p>
+        <h3 class="sec_title_text">SUPPORT QUERY FORM</h3>
+        <form class="support_form" [formGroup]="supportForm"  (ngSubmit)="userQuery()">
+          <div class="input-group">
+          <label><span>*</span>mandatory fields</label>
+            <span class="input-group-addon"><img src="assets/cashblast/image/icon_6.png"></span>
+            <input id="text" type="text" class="form-control" formControlName="name"  placeholder="Enter Your Name">
+          </div>
+          <div *ngIf="name.hasError('required') && name.touched">
+            <p style="color: white;float: left">Name is Required</p>
+            </div> 
+          <div class="input-group">
+            <span class="input-group-addon"><span>*</span><img src="assets/cashblast/image/icon_7.png"></span>
+            <input id="text" type="text" class="form-control" formControlName="mobile" pattern="^[6-9][0-9]{9}$" placeholder="Enter Your Mobile Number">
+          </div>
+          <div *ngIf="mobile.hasError('required') && mobile.touched">
+            <p style="color: white;float: left">MobileNo is Required</p>
+            </div> 
+          <div class="input-group">
+            <span class="input-group-addon"><span>*</span><img src="assets/cashblast/image/icon_8.png"></span>
+            <input id="text" type="email" class="form-control"  formControlName="email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" placeholder="Enter Your Email Id">
+          </div>
+          <div *ngIf="email.hasError('required') && email.touched">
+            <p style="color: white;float: left">Email is Required</p>
+            </div>
+          <div class="input-group">
+            <span class="input-group-addon"><span>*</span><img src="assets/cashblast/image/icon_9.png"></span>
+            <input id="text" type="text" class="form-control"  formControlName="contestname" placeholder="Enter Contest Name">
+          </div>
+          <div *ngIf="contestname.hasError('required') && contestname.touched">
+            <p style="color: white;float: left">Contest Name is Required</p>
+            </div> 
+          <div class="input-group">
+           <textarea class="form-control" placeholder="Explain your query in detail." rows="7" id="comment"></textarea>
+          </div>
+          <button type="submit" class="btn btn-default login_btn">SUBMIT</button>
+          <h5>Or email us at 
+            <a href="javascript:void(0);">support@huntergames.com</a>
+          </h5>
+        </form>
+      </div>
+    </div>  
+  </div>
+</div>	

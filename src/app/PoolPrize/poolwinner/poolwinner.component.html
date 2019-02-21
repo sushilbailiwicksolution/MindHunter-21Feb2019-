@@ -1,0 +1,51 @@
+<body id="pp_winner">
+<div class="pool_home_screen">
+		<div class="container">
+			<div class="pool_home_info pool_winner_info">	
+				<div class="col-xs-12 p_0">
+					<div class="pool_header">
+							<div class="p_0">
+							<a class="logo">
+								<img class="logo-hunter" src="assets/poolprize/image/pool_logo.jpg" (click)="getHome()">
+							</a>
+							</div>
+							<div class="col-xs-12 p_0">
+								<h3 class="pool_quiztitle">Pool Prize <p>Congratulations!</p></h3>
+							</div>
+					</div>
+					<!-- progressbar start -->	
+			        <div class="progress_info">
+			            <div class="progress" data-percentage="100">
+			                <span class="progress-left">
+			                    <span class="progress-bar"></span>
+			                </span>
+			                <span class="progress-right">
+			                    <span class="progress-bar"></span>
+			                </span>
+			                <div class="progress-value">
+			                    <div>
+			                        <span>Score</span>
+			                        {{score}}/{{totalQuestion}}<br>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+					<!-- progressbar end -->
+					<div class="pool_quize_btntext pool_winner2_price">
+						 <p>You are eligible for Tier 1</p>	
+						 <label>Winning Pool Prize Points</label>
+						<span>{{winningamt | number : "" : ""}}</span>
+					</div>
+					<div class="pool_quize_btntext">
+						All players with a qualifying score will get an equal share of that tier of Pool Prize. You can play multiple times and your BEST SCORE of the day will be considered. 
+					</div>
+
+					<button class="btn pool_playbtn play-text-b" (click)="getHome()">
+						Play more GAMES
+					</button>
+				</div>	
+			</div>
+		</div>
+		
+  </div>	
+  </body>

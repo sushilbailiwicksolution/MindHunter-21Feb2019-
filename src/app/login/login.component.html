@@ -1,0 +1,25 @@
+
+
+<div class="home_screen">
+  <div class="container">
+    <div class="col-xs-12">
+      <div class="login_info">
+        <!-- <h3 class="sec_title_text">Login</h3> -->
+        <h3>Login</h3>
+          <h6>Get daily bonus rewards</h6>
+          <br>
+        <form [formGroup]="loginForm" (ngSubmit)="login()" class="support_form">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+            <input id="mobileNo" type="number" class="form-control" formControlName="mobileNo"
+            inputmode="numeric" pattern="^[6-9][0-9]{9}$" digitOnly minlength="10" maxlength="10"   placeholder="10 Digit Mobile Number">
+          </div>
+        <button type="submit" class="btn btn-default login_btn" [disabled]="!loginForm.valid">LOGIN</button>
+      
+        </form>
+        <div class="login_text">Don't have an account? <a routerLink="register">Sign Up</a> </div>
+
+      </div>
+    </div>
+  </div>
+</div>	

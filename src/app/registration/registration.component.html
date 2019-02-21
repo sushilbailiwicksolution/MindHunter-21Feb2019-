@@ -1,0 +1,18 @@
+<div class="home_screen" >
+  <div class="container">
+    <div class="col-xs-12">
+      <div class="login_info">
+        <h3 class="sec_title_text">Sign Up</h3>
+        <form class="support_form"  [formGroup]="registerForm" (ngSubmit)="register()" novalidate>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+            <input id="mobileNumber" type="text"  formControlName="mobileNumber" class="form-control" name="mobileNumber" 
+            inputmode="numeric" pattern="^[6-9][0-9]{9}$" digitOnly minlength="10" maxlength="10"
+            placeholder="Enter your mobile number">
+          </div>
+          <button type="submit" class="btn btn-default login_btn" [disabled]="!registerForm.valid" >Proceed</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
